@@ -1,0 +1,2299 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--this message is not in the script yet but for beta testers LOL
+
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("checking if t-shirt is bought.")
+Wait(5)
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("thanks for buying!")
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("@imjustsigma_real / SIGMA YURI")
+
+
+print("thank you for buying [SIGMA YURI]!")
+print("all updates will be in logs tab!")
+
+local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
+-------------
+local window = DrRayLibrary:Load("SIGMA YURI PAID!", "Default")
+--------------
+local tab1 = DrRayLibrary.newTab("movement", "ImageIdHere")
+--------------
+local tab2 = DrRayLibrary.newTab("aimbot", "ImageIdHere")
+--------------
+local tab3 = DrRayLibrary.newTab("viusals", "ImageIdHere")
+--------------
+local tab4 = DrRayLibrary.newTab("presets", "ImageIdHere")
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+tab1.newButton("velocity speed", "toggle is Z", function()
+   local speedhack = false
+
+function onKeyPress(inputObject, gameProcessedEvent)
+    if inputObject.KeyCode == Enum.KeyCode.Z and gameProcessedEvent == false then
+     if speedhack == false then
+       speedhack = true
+
+     elseif speedhack == true then
+       speedhack = false
+    
+       
+     end
+   end
+end
+ 
+game:GetService("UserInputService").InputBegan:connect(onKeyPress)
+
+
+while wait() do
+    if speedhack == true then
+     game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 100
+    end
+    
+end
+
+end)
+-------------------------------
+-------------------------------
+tab1.newButton("Spinbot", "makes your character spin in a werid way", function()
+    -- SIGMA YURI PAID YAYYAYYAYAY
+ 
+power = 1200 -- change this to make it more or less powerful
+ 
+game:GetService('RunService').Stepped:connect(function()
+game.Players.LocalPlayer.Character.Head.CanCollide = false
+game.Players.LocalPlayer.Character.UpperTorso.CanCollide = false
+game.Players.LocalPlayer.Character.LowerTorso.CanCollide = false
+game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
+end)
+wait(.1)
+local bambam = Instance.new("BodyThrust")
+bambam.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+bambam.Force = Vector3.new(power,0,power)
+bambam.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+end)
+-------------------------------
+tab1.newButton("death postion spawn", "respawn you where you died", function()
+function log() deadpos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame end
+
+game.Players.LocalPlayer.Character.Humanoid.Died:Connect(log)
+
+game.Players.LocalPlayer.CharacterAdded:Connect(function(char)
+
+char:WaitForChild("Humanoid", 3).Died:Connect(log)
+
+char:WaitForChild("HumanoidRootPart",3).CFrame = deadpos
+    
+end)
+end)
+
+-------------------------------
+-------------------------------
+-------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------
+-------------------------------
+-------------------------------
+-------------------------------
+-------------------------------
+--------------------------------------------------------------
+-------------------------------
+--------------------------------------------------------------
+-------------------------------
+--------------------------------------------------------------
+-------------------------------
+--------------------------------------------------------------
+-------------------------------
+--------------------------------------------------------------
+-------------------------------
+--------------------------------------------------------------
+-------------------------------
+--------------------------------------------------------------
+-------------------------------
+--------------------------------------------------------------
+-------------------------------
+-------------------------------
+tab2.newButton("hood customs", "prediction 0.03[q][uppertorso]", function()
+getgenv().Prediction = 0.03
+getgenv().AimPart = "UpperTorso"
+getgenv().Key = "C"
+getgenv().DisableKey = "P"
+
+getgenv().FOV = true
+getgenv().ShowFOV = true
+getgenv().FOVSize = 50
+
+--// Variables (Service)
+
+local Players = game:GetService("Players")
+local RS = game:GetService("RunService")
+local WS = game:GetService("Workspace")
+local GS = game:GetService("GuiService")
+local SG = game:GetService("StarterGui")
+
+--// Variables (regular)
+
+local LP = Players.LocalPlayer
+local Mouse = LP:GetMouse()
+local Camera = WS.CurrentCamera
+local GetGuiInset = GS.GetGuiInset
+
+local AimlockState = true
+local Locked
+local Victim
+
+local SelectedKey = getgenv().Key
+local SelectedDisableKey = getgenv().DisableKey
+
+--// Notification function
+
+function Notify(tx)
+    SG:SetCore("SendNotification", {
+        Title = "Enabled ✔ | SIGMA YURI[PAID]",
+        Text = tx,
+        Duration = 2
+    })
+end
+
+--// Check if aimlock is loaded
+
+if getgenv().Loaded == true then
+    Notify("Aimlock is already loaded!")
+    return
+end
+
+getgenv().Loaded = true
+
+--// FOV Circle
+
+local fov = Drawing.new("Circle")
+fov.Filled = false
+fov.Transparency = 1
+fov.Thickness = 1
+fov.Color = Color3.fromRGB(255, 5, 100)
+fov.NumSides = 3
+
+--// Functions
+
+function update()
+    if getgenv().FOV == true then
+        if fov then
+            fov.Radius = getgenv().FOVSize * 2
+            fov.Visible = getgenv().ShowFOV
+            fov.Position = Vector2.new(Mouse.X, Mouse.Y + GetGuiInset(GS).Y)
+
+            return fov
+        end
+    end
+end
+
+function WTVP(arg)
+    return Camera:WorldToViewportPoint(arg)
+end
+
+function WTSP(arg)
+    return Camera.WorldToScreenPoint(Camera, arg)
+end
+
+function getClosest()
+    local closestPlayer
+    local shortestDistance = math.huge
+
+    for i, v in pairs(game.Players:GetPlayers()) do
+        local notKO = v.Character:WaitForChild("BodyEffects")["K.O"].Value ~= true
+        local notGrabbed = v.Character:FindFirstChild("GRABBING_COINSTRAINT") == nil
+        
+        if v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("Humanoid") and v.Character.Humanoid.Health ~= 0 and v.Character:FindFirstChild(getgenv().AimPart) and notKO and notGrabbed then
+            local pos = Camera:WorldToViewportPoint(v.Character.PrimaryPart.Position)
+            local magnitude = (Vector2.new(pos.X, pos.Y) - Vector2.new(Mouse.X, Mouse.Y)).magnitude
+            
+            if (getgenv().FOV) then
+                if (fov.Radius > magnitude and magnitude < shortestDistance) then
+                    closestPlayer = v
+                    shortestDistance = magnitude
+                end
+            else
+                if (magnitude < shortestDistance) then
+                    closestPlayer = v
+                    shortestDistance = magnitude
+                end
+            end
+        end
+    end
+    return closestPlayer
+end
+ 
+--// Checks if key is down
+
+Mouse.KeyDown:Connect(function(k)
+    SelectedKey = SelectedKey:lower()
+    SelectedDisableKey = SelectedDisableKey:lower()
+    if k == SelectedKey then
+        if AimlockState == true then
+            Locked = not Locked
+            if Locked then
+                Victim = getClosest()
+
+                Notify("Locked onto: "..tostring(Victim.Character.Humanoid.DisplayName))
+            else
+                if Victim ~= nil then
+                    Victim = nil
+
+                    Notify("Unlocked!")
+                end
+            end
+        else
+            Notify("Aimlock is not enabled!")
+        end
+    end
+    if k == SelectedDisableKey then
+        AimlockState = not AimlockState
+    end
+end)
+
+--// Loop update FOV and loop camera lock onto target
+
+RS.RenderStepped:Connect(function()
+    update()
+    if AimlockState == true then
+        if Victim ~= nil then
+            Camera.CFrame = CFrame.new(Camera.CFrame.p, Victim.Character[getgenv().AimPart].Position + Victim.Character[getgenv().AimPart].Velocity*getgenv().Prediction)
+        end
+    end
+end)
+	while wait() do
+        if getgenv().AutoPrediction == true then
+        local pingvalue = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()
+        local split = string.split(pingvalue,'(')
+        local ping = tonumber(split[1])
+            if ping < 252325 then
+            getgenv().Prediction = 1.4
+        elseif ping < 2199999995 then
+            getgenv().Prediction = 1.2
+	    elseif ping < 29999905 then
+            getgenv().Prediction = 1.0
+	    elseif ping < 1999990 then
+            getgenv().Prediction = 0.10
+        elseif ping < 18999990 then
+            getgenv().Prediction = 0.12
+	    elseif ping < 199999970 then
+            getgenv().Prediction = 0.15
+	    elseif ping < 19999960 then
+            getgenv().Prediction = 0.18
+	    elseif ping < 1999950 then
+            getgenv().Prediction = 0.110
+        elseif ping < 19999940 then
+            getgenv().Prediction = 0.113
+        elseif ping < 19999999930 then
+            getgenv().Prediction = 0.116
+        elseif ping < 999999120 then
+            getgenv().Prediction = 0.120
+        elseif ping < 999999110 then
+            getgenv().Prediction = 0.124
+        elseif ping < 199999905 then
+            getgenv().Prediction = 0.127
+        elseif ping < 99999990 then
+            getgenv().Prediction = 0.130
+        elseif ping < 999999980 then
+            getgenv().Prediction = 0.133
+        elseif ping < 799999990 then
+            getgenv().Prediction = 0.136
+        elseif ping < 99999960 then
+            getgenv().Prediction = 0.15038
+        elseif ping < 59999990 then
+            getgenv().Prediction = 0.15038
+        elseif ping < 99999940 then
+            getgenv().Prediction = 0.145
+        elseif ping < 3999990 then
+            getgenv().Prediction = 0.155
+        elseif ping < 29999990 then
+            getgenv().Prediction = 0.157
+        end
+        end
+	end 
+end)
+------------------------
+---------------------
+
+
+
+
+----------------------------
+tab2.newButton("hood customs", "prediction 0.05[q][uppertorso]", function()
+getgenv().Prediction = 0.05
+getgenv().AimPart = "UpperTorso"
+getgenv().Key = "Q"
+getgenv().DisableKey = "P"
+
+getgenv().FOV = true
+getgenv().ShowFOV = true
+getgenv().FOVSize = 30
+
+--// Variables (Service)
+
+local Players = game:GetService("Players")
+local RS = game:GetService("RunService")
+local WS = game:GetService("Workspace")
+local GS = game:GetService("GuiService")
+local SG = game:GetService("StarterGui")
+
+--// Variables (regular)
+
+local LP = Players.LocalPlayer
+local Mouse = LP:GetMouse()
+local Camera = WS.CurrentCamera
+local GetGuiInset = GS.GetGuiInset
+
+local AimlockState = true
+local Locked
+local Victim
+
+local SelectedKey = getgenv().Key
+local SelectedDisableKey = getgenv().DisableKey
+
+--// Notification function
+
+function Notify(tx)
+    SG:SetCore("SendNotification", {
+        Title = "Enabled ✔ | SIGMA YURI[PAID]",
+        Text = tx,
+        Duration = 2
+    })
+end
+
+--// Check if aimlock is loaded
+
+if getgenv().Loaded == true then
+    Notify("Aimlock is already loaded!")
+    return
+end
+
+getgenv().Loaded = true
+
+--// FOV Circle
+
+local fov = Drawing.new("Circle")
+fov.Filled = false
+fov.Transparency = 1
+fov.Thickness = 1
+fov.Color = Color3.fromRGB(255, 5, 100)
+fov.NumSides = 3
+
+--// Functions
+
+function update()
+    if getgenv().FOV == true then
+        if fov then
+            fov.Radius = getgenv().FOVSize * 2
+            fov.Visible = getgenv().ShowFOV
+            fov.Position = Vector2.new(Mouse.X, Mouse.Y + GetGuiInset(GS).Y)
+
+            return fov
+        end
+    end
+end
+
+function WTVP(arg)
+    return Camera:WorldToViewportPoint(arg)
+end
+
+function WTSP(arg)
+    return Camera.WorldToScreenPoint(Camera, arg)
+end
+
+function getClosest()
+    local closestPlayer
+    local shortestDistance = math.huge
+
+    for i, v in pairs(game.Players:GetPlayers()) do
+        local notKO = v.Character:WaitForChild("BodyEffects")["K.O"].Value ~= true
+        local notGrabbed = v.Character:FindFirstChild("GRABBING_COINSTRAINT") == nil
+        
+        if v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("Humanoid") and v.Character.Humanoid.Health ~= 0 and v.Character:FindFirstChild(getgenv().AimPart) and notKO and notGrabbed then
+            local pos = Camera:WorldToViewportPoint(v.Character.PrimaryPart.Position)
+            local magnitude = (Vector2.new(pos.X, pos.Y) - Vector2.new(Mouse.X, Mouse.Y)).magnitude
+            
+            if (getgenv().FOV) then
+                if (fov.Radius > magnitude and magnitude < shortestDistance) then
+                    closestPlayer = v
+                    shortestDistance = magnitude
+                end
+            else
+                if (magnitude < shortestDistance) then
+                    closestPlayer = v
+                    shortestDistance = magnitude
+                end
+            end
+        end
+    end
+    return closestPlayer
+end
+ 
+--// Checks if key is down
+
+Mouse.KeyDown:Connect(function(k)
+    SelectedKey = SelectedKey:lower()
+    SelectedDisableKey = SelectedDisableKey:lower()
+    if k == SelectedKey then
+        if AimlockState == true then
+            Locked = not Locked
+            if Locked then
+                Victim = getClosest()
+
+                Notify("Locked onto: "..tostring(Victim.Character.Humanoid.DisplayName))
+            else
+                if Victim ~= nil then
+                    Victim = nil
+
+                    Notify("Unlocked!")
+                end
+            end
+        else
+            Notify("Aimlock is not enabled!")
+        end
+    end
+    if k == SelectedDisableKey then
+        AimlockState = not AimlockState
+    end
+end)
+
+--// Loop update FOV and loop camera lock onto target
+
+RS.RenderStepped:Connect(function()
+    update()
+    if AimlockState == true then
+        if Victim ~= nil then
+            Camera.CFrame = CFrame.new(Camera.CFrame.p, Victim.Character[getgenv().AimPart].Position + Victim.Character[getgenv().AimPart].Velocity*getgenv().Prediction)
+        end
+    end
+end)
+	while wait() do
+        if getgenv().AutoPrediction == true then
+        local pingvalue = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()
+        local split = string.split(pingvalue,'(')
+        local ping = tonumber(split[1])
+            if ping < 252325 then
+            getgenv().Prediction = 1.4
+        elseif ping < 2199999995 then
+            getgenv().Prediction = 1.2
+	    elseif ping < 29999905 then
+            getgenv().Prediction = 1.0
+	    elseif ping < 1999990 then
+            getgenv().Prediction = 0.10
+        elseif ping < 18999990 then
+            getgenv().Prediction = 0.12
+	    elseif ping < 199999970 then
+            getgenv().Prediction = 0.15
+	    elseif ping < 19999960 then
+            getgenv().Prediction = 0.18
+	    elseif ping < 1999950 then
+            getgenv().Prediction = 0.110
+        elseif ping < 19999940 then
+            getgenv().Prediction = 0.113
+        elseif ping < 19999999930 then
+            getgenv().Prediction = 0.116
+        elseif ping < 999999120 then
+            getgenv().Prediction = 0.120
+        elseif ping < 999999110 then
+            getgenv().Prediction = 0.124
+        elseif ping < 199999905 then
+            getgenv().Prediction = 0.127
+        elseif ping < 99999990 then
+            getgenv().Prediction = 0.130
+        elseif ping < 999999980 then
+            getgenv().Prediction = 0.133
+        elseif ping < 799999990 then
+            getgenv().Prediction = 0.136
+        elseif ping < 99999960 then
+            getgenv().Prediction = 0.15038
+        elseif ping < 59999990 then
+            getgenv().Prediction = 0.15038
+        elseif ping < 99999940 then
+            getgenv().Prediction = 0.145
+        elseif ping < 3999990 then
+            getgenv().Prediction = 0.155
+        elseif ping < 29999990 then
+            getgenv().Prediction = 0.157
+        end
+        end
+	end
+end)
+---------------------
+----------------
+-------------
+-----------------------------
+
+tab2.newButton("hood customs", "0.6[C[head]]", function()
+getgenv().Prediction = 0.06
+getgenv().AimPart = "Head"
+getgenv().Key = "C"
+getgenv().DisableKey = "P"
+
+getgenv().FOV = true
+getgenv().ShowFOV = true
+getgenv().FOVSize = 50
+
+--// Variables (Service)
+
+local Players = game:GetService("Players")
+local RS = game:GetService("RunService")
+local WS = game:GetService("Workspace")
+local GS = game:GetService("GuiService")
+local SG = game:GetService("StarterGui")
+
+--// Variables (regular)
+
+local LP = Players.LocalPlayer
+local Mouse = LP:GetMouse()
+local Camera = WS.CurrentCamera
+local GetGuiInset = GS.GetGuiInset
+
+local AimlockState = true
+local Locked
+local Victim
+
+local SelectedKey = getgenv().Key
+local SelectedDisableKey = getgenv().DisableKey
+
+--// Notification function
+
+function Notify(tx)
+    SG:SetCore("SendNotification", {
+        Title = "Enabled ✔ | SIGMA YURI[PAID]",
+        Text = tx,
+        Duration = 5
+    })
+end
+
+--// Check if aimlock is loaded
+
+if getgenv().Loaded == true then
+    Notify("Aimlock is already loaded!")
+    return
+end
+
+getgenv().Loaded = true
+
+--// FOV Circle
+
+local fov = Drawing.new("Sqaure")
+fov.Filled = false
+fov.Transparency = 1
+fov.Thickness = 1
+fov.Color = Color3.fromRGB(255, 5, 100)
+fov.NumSides = 3
+
+--// Functions
+
+function update()
+    if getgenv().FOV == true then
+        if fov then
+            fov.Radius = getgenv().FOVSize * 2
+            fov.Visible = getgenv().ShowFOV
+            fov.Position = Vector2.new(Mouse.X, Mouse.Y + GetGuiInset(GS).Y)
+
+            return fov
+        end
+    end
+end
+
+function WTVP(arg)
+    return Camera:WorldToViewportPoint(arg)
+end
+
+function WTSP(arg)
+    return Camera.WorldToScreenPoint(Camera, arg)
+end
+
+function getClosest()
+    local closestPlayer
+    local shortestDistance = math.huge
+
+    for i, v in pairs(game.Players:GetPlayers()) do
+        local notKO = v.Character:WaitForChild("BodyEffects")["K.O"].Value ~= true
+        local notGrabbed = v.Character:FindFirstChild("GRABBING_COINSTRAINT") == nil
+        
+        if v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("Humanoid") and v.Character.Humanoid.Health ~= 0 and v.Character:FindFirstChild(getgenv().AimPart) and notKO and notGrabbed then
+            local pos = Camera:WorldToViewportPoint(v.Character.PrimaryPart.Position)
+            local magnitude = (Vector2.new(pos.X, pos.Y) - Vector2.new(Mouse.X, Mouse.Y)).magnitude
+            
+            if (getgenv().FOV) then
+                if (fov.Radius > magnitude and magnitude < shortestDistance) then
+                    closestPlayer = v
+                    shortestDistance = magnitude
+                end
+            else
+                if (magnitude < shortestDistance) then
+                    closestPlayer = v
+                    shortestDistance = magnitude
+                end
+            end
+        end
+    end
+    return closestPlayer
+end
+ 
+--// Checks if key is down
+
+Mouse.KeyDown:Connect(function(k)
+    SelectedKey = SelectedKey:lower()
+    SelectedDisableKey = SelectedDisableKey:lower()
+    if k == SelectedKey then
+        if AimlockState == true then
+            Locked = not Locked
+            if Locked then
+                Victim = getClosest()
+
+                Notify("Locked onto: "..tostring(Victim.Character.Humanoid.DisplayName))
+            else
+                if Victim ~= nil then
+                    Victim = nil
+
+                    Notify("Unlocked!")
+                end
+            end
+        else
+            Notify("Aimlock is not enabled!")
+        end
+    end
+    if k == SelectedDisableKey then
+        AimlockState = not AimlockState
+    end
+end)
+
+--// Loop update FOV and loop camera lock onto target
+
+RS.RenderStepped:Connect(function()
+    update()
+    if AimlockState == true then
+        if Victim ~= nil then
+            Camera.CFrame = CFrame.new(Camera.CFrame.p, Victim.Character[getgenv().AimPart].Position + Victim.Character[getgenv().AimPart].Velocity*getgenv().Prediction)
+        end
+    end
+end)
+	while wait() do
+        if getgenv().AutoPrediction == true then
+        local pingvalue = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()
+        local split = string.split(pingvalue,'(')
+        local ping = tonumber(split[1])
+            if ping < 252325 then
+            getgenv().Prediction = 1.4
+        elseif ping < 2199999995 then
+            getgenv().Prediction = 1.2
+	    elseif ping < 29999905 then
+            getgenv().Prediction = 1.0
+	    elseif ping < 1999990 then
+            getgenv().Prediction = 0.10
+        elseif ping < 18999990 then
+            getgenv().Prediction = 0.12
+	    elseif ping < 199999970 then
+            getgenv().Prediction = 0.15
+	    elseif ping < 19999960 then
+            getgenv().Prediction = 0.18
+	    elseif ping < 1999950 then
+            getgenv().Prediction = 0.110
+        elseif ping < 19999940 then
+            getgenv().Prediction = 0.113
+        elseif ping < 19999999930 then
+            getgenv().Prediction = 0.116
+        elseif ping < 999999120 then
+            getgenv().Prediction = 0.120
+        elseif ping < 999999110 then
+            getgenv().Prediction = 0.124
+        elseif ping < 199999905 then
+            getgenv().Prediction = 0.127
+        elseif ping < 99999990 then
+            getgenv().Prediction = 0.130
+        elseif ping < 999999980 then
+            getgenv().Prediction = 0.133
+        elseif ping < 799999990 then
+            getgenv().Prediction = 0.136
+        elseif ping < 99999960 then
+            getgenv().Prediction = 0.15038
+        elseif ping < 59999990 then
+            getgenv().Prediction = 0.15038
+        elseif ping < 99999940 then
+            getgenv().Prediction = 0.145
+        elseif ping < 3999990 then
+            getgenv().Prediction = 0.155
+        elseif ping < 29999990 then
+            getgenv().Prediction = 0.157
+        end
+        end
+	end
+end)
+-------------------------------------
+-------------------------------
+------------------------------
+-------------------------
+tab2.newButton("hood customs", "0.4[C[head]]", function()
+getgenv().Prediction = 0.04
+getgenv().AimPart = "Head"
+getgenv().Key = "C"
+getgenv().DisableKey = "P"
+
+getgenv().FOV = true
+getgenv().ShowFOV = true
+getgenv().FOVSize = 50
+
+--// Variables (Service)
+
+local Players = game:GetService("Players")
+local RS = game:GetService("RunService")
+local WS = game:GetService("Workspace")
+local GS = game:GetService("GuiService")
+local SG = game:GetService("StarterGui")
+
+--// Variables (regular)
+
+local LP = Players.LocalPlayer
+local Mouse = LP:GetMouse()
+local Camera = WS.CurrentCamera
+local GetGuiInset = GS.GetGuiInset
+
+local AimlockState = true
+local Locked
+local Victim
+
+local SelectedKey = getgenv().Key
+local SelectedDisableKey = getgenv().DisableKey
+
+--// Notification function
+
+function Notify(tx)
+    SG:SetCore("SendNotification", {
+        Title = "Enabled ✔ | SIGMA YURI[PAID]",
+        Text = tx,
+        Duration = 5
+    })
+end
+
+--// Check if aimlock is loaded
+
+if getgenv().Loaded == true then
+    Notify("Aimlock is already loaded!")
+    return
+end
+
+getgenv().Loaded = true
+
+--// FOV Circle
+
+local fov = Drawing.new("Sqaure")
+fov.Filled = false
+fov.Transparency = 1
+fov.Thickness = 1
+fov.Color = Color3.fromRGB(255, 5, 100)
+fov.NumSides = 3
+
+--// Functions
+
+function update()
+    if getgenv().FOV == true then
+        if fov then
+            fov.Radius = getgenv().FOVSize * 2
+            fov.Visible = getgenv().ShowFOV
+            fov.Position = Vector2.new(Mouse.X, Mouse.Y + GetGuiInset(GS).Y)
+
+            return fov
+        end
+    end
+end
+
+function WTVP(arg)
+    return Camera:WorldToViewportPoint(arg)
+end
+
+function WTSP(arg)
+    return Camera.WorldToScreenPoint(Camera, arg)
+end
+
+function getClosest()
+    local closestPlayer
+    local shortestDistance = math.huge
+
+    for i, v in pairs(game.Players:GetPlayers()) do
+        local notKO = v.Character:WaitForChild("BodyEffects")["K.O"].Value ~= true
+        local notGrabbed = v.Character:FindFirstChild("GRABBING_COINSTRAINT") == nil
+        
+        if v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("Humanoid") and v.Character.Humanoid.Health ~= 0 and v.Character:FindFirstChild(getgenv().AimPart) and notKO and notGrabbed then
+            local pos = Camera:WorldToViewportPoint(v.Character.PrimaryPart.Position)
+            local magnitude = (Vector2.new(pos.X, pos.Y) - Vector2.new(Mouse.X, Mouse.Y)).magnitude
+            
+            if (getgenv().FOV) then
+                if (fov.Radius > magnitude and magnitude < shortestDistance) then
+                    closestPlayer = v
+                    shortestDistance = magnitude
+                end
+            else
+                if (magnitude < shortestDistance) then
+                    closestPlayer = v
+                    shortestDistance = magnitude
+                end
+            end
+        end
+    end
+    return closestPlayer
+end
+ 
+--// Checks if key is down
+
+Mouse.KeyDown:Connect(function(k)
+    SelectedKey = SelectedKey:lower()
+    SelectedDisableKey = SelectedDisableKey:lower()
+    if k == SelectedKey then
+        if AimlockState == true then
+            Locked = not Locked
+            if Locked then
+                Victim = getClosest()
+
+                Notify("Locked onto: "..tostring(Victim.Character.Humanoid.DisplayName))
+            else
+                if Victim ~= nil then
+                    Victim = nil
+
+                    Notify("Unlocked!")
+                end
+            end
+        else
+            Notify("Aimlock is not enabled!")
+        end
+    end
+    if k == SelectedDisableKey then
+        AimlockState = not AimlockState
+    end
+end)
+
+--// Loop update FOV and loop camera lock onto target
+
+RS.RenderStepped:Connect(function()
+    update()
+    if AimlockState == true then
+        if Victim ~= nil then
+            Camera.CFrame = CFrame.new(Camera.CFrame.p, Victim.Character[getgenv().AimPart].Position + Victim.Character[getgenv().AimPart].Velocity*getgenv().Prediction)
+        end
+    end
+end)
+	while wait() do
+        if getgenv().AutoPrediction == true then
+        local pingvalue = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()
+        local split = string.split(pingvalue,'(')
+        local ping = tonumber(split[1])
+            if ping < 252325 then
+            getgenv().Prediction = 1.4
+        elseif ping < 2199999995 then
+            getgenv().Prediction = 1.2
+	    elseif ping < 29999905 then
+            getgenv().Prediction = 1.0
+	    elseif ping < 1999990 then
+            getgenv().Prediction = 0.10
+        elseif ping < 18999990 then
+            getgenv().Prediction = 0.12
+	    elseif ping < 199999970 then
+            getgenv().Prediction = 0.15
+	    elseif ping < 19999960 then
+            getgenv().Prediction = 0.18
+	    elseif ping < 1999950 then
+            getgenv().Prediction = 0.110
+        elseif ping < 19999940 then
+            getgenv().Prediction = 0.113
+        elseif ping < 19999999930 then
+            getgenv().Prediction = 0.116
+        elseif ping < 999999120 then
+            getgenv().Prediction = 0.120
+        elseif ping < 999999110 then
+            getgenv().Prediction = 0.124
+        elseif ping < 199999905 then
+            getgenv().Prediction = 0.127
+        elseif ping < 99999990 then
+            getgenv().Prediction = 0.130
+        elseif ping < 999999980 then
+            getgenv().Prediction = 0.133
+        elseif ping < 799999990 then
+            getgenv().Prediction = 0.136
+        elseif ping < 99999960 then
+            getgenv().Prediction = 0.15038
+        elseif ping < 59999990 then
+            getgenv().Prediction = 0.15038
+        elseif ping < 99999940 then
+            getgenv().Prediction = 0.145
+        elseif ping < 3999990 then
+            getgenv().Prediction = 0.155
+        elseif ping < 29999990 then
+            getgenv().Prediction = 0.157
+        end
+        end
+	end
+end)
+-----------------------
+-----------------------
+-----------------------
+tab2.newButton("da hood", "0.119832[C[Uppertorso]]", function()
+getgenv().Prediction = 0.119832
+getgenv().AimPart = "UpperTorso"
+getgenv().Key = "C"
+getgenv().DisableKey = "P"
+
+getgenv().FOV = true
+getgenv().ShowFOV = true
+getgenv().FOVSize = 50
+
+--// Variables (Service)
+
+local Players = game:GetService("Players")
+local RS = game:GetService("RunService")
+local WS = game:GetService("Workspace")
+local GS = game:GetService("GuiService")
+local SG = game:GetService("StarterGui")
+
+--// Variables (regular)
+
+local LP = Players.LocalPlayer
+local Mouse = LP:GetMouse()
+local Camera = WS.CurrentCamera
+local GetGuiInset = GS.GetGuiInset
+
+local AimlockState = true
+local Locked
+local Victim
+
+local SelectedKey = getgenv().Key
+local SelectedDisableKey = getgenv().DisableKey
+
+--// Notification function
+
+function Notify(tx)
+    SG:SetCore("SendNotification", {
+        Title = "Enabled ✔ | SIGMA YURI[PAID]",
+        Text = tx,
+        Duration = 5
+    })
+end
+
+--// Check if aimlock is loaded
+
+if getgenv().Loaded == true then
+    Notify("Aimlock is already loaded!")
+    return
+end
+
+getgenv().Loaded = true
+
+--// FOV Circle
+
+local fov = Drawing.new("Sqaure")
+fov.Filled = false
+fov.Transparency = 1
+fov.Thickness = 1
+fov.Color = Color3.fromRGB(255, 5, 100)
+fov.NumSides = 3
+
+--// Functions
+
+function update()
+    if getgenv().FOV == true then
+        if fov then
+            fov.Radius = getgenv().FOVSize * 2
+            fov.Visible = getgenv().ShowFOV
+            fov.Position = Vector2.new(Mouse.X, Mouse.Y + GetGuiInset(GS).Y)
+
+            return fov
+        end
+    end
+end
+
+function WTVP(arg)
+    return Camera:WorldToViewportPoint(arg)
+end
+
+function WTSP(arg)
+    return Camera.WorldToScreenPoint(Camera, arg)
+end
+
+function getClosest()
+    local closestPlayer
+    local shortestDistance = math.huge
+
+    for i, v in pairs(game.Players:GetPlayers()) do
+        local notKO = v.Character:WaitForChild("BodyEffects")["K.O"].Value ~= true
+        local notGrabbed = v.Character:FindFirstChild("GRABBING_COINSTRAINT") == nil
+        
+        if v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("Humanoid") and v.Character.Humanoid.Health ~= 0 and v.Character:FindFirstChild(getgenv().AimPart) and notKO and notGrabbed then
+            local pos = Camera:WorldToViewportPoint(v.Character.PrimaryPart.Position)
+            local magnitude = (Vector2.new(pos.X, pos.Y) - Vector2.new(Mouse.X, Mouse.Y)).magnitude
+            
+            if (getgenv().FOV) then
+                if (fov.Radius > magnitude and magnitude < shortestDistance) then
+                    closestPlayer = v
+                    shortestDistance = magnitude
+                end
+            else
+                if (magnitude < shortestDistance) then
+                    closestPlayer = v
+                    shortestDistance = magnitude
+                end
+            end
+        end
+    end
+    return closestPlayer
+end
+ 
+--// Checks if key is down
+
+Mouse.KeyDown:Connect(function(k)
+    SelectedKey = SelectedKey:lower()
+    SelectedDisableKey = SelectedDisableKey:lower()
+    if k == SelectedKey then
+        if AimlockState == true then
+            Locked = not Locked
+            if Locked then
+                Victim = getClosest()
+
+                Notify("Locked onto: "..tostring(Victim.Character.Humanoid.DisplayName))
+            else
+                if Victim ~= nil then
+                    Victim = nil
+
+                    Notify("Unlocked!")
+                end
+            end
+        else
+            Notify("Aimlock is not enabled!")
+        end
+    end
+    if k == SelectedDisableKey then
+        AimlockState = not AimlockState
+    end
+end)
+
+--// Loop update FOV and loop camera lock onto target
+
+RS.RenderStepped:Connect(function()
+    update()
+    if AimlockState == true then
+        if Victim ~= nil then
+            Camera.CFrame = CFrame.new(Camera.CFrame.p, Victim.Character[getgenv().AimPart].Position + Victim.Character[getgenv().AimPart].Velocity*getgenv().Prediction)
+        end
+    end
+end)
+	while wait() do
+        if getgenv().AutoPrediction == true then
+        local pingvalue = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()
+        local split = string.split(pingvalue,'(')
+        local ping = tonumber(split[1])
+            if ping < 252325 then
+            getgenv().Prediction = 1.4
+        elseif ping < 2199999995 then
+            getgenv().Prediction = 1.2
+	    elseif ping < 29999905 then
+            getgenv().Prediction = 1.0
+	    elseif ping < 1999990 then
+            getgenv().Prediction = 0.10
+        elseif ping < 18999990 then
+            getgenv().Prediction = 0.12
+	    elseif ping < 199999970 then
+            getgenv().Prediction = 0.15
+	    elseif ping < 19999960 then
+            getgenv().Prediction = 0.18
+	    elseif ping < 1999950 then
+            getgenv().Prediction = 0.110
+        elseif ping < 19999940 then
+            getgenv().Prediction = 0.113
+        elseif ping < 19999999930 then
+            getgenv().Prediction = 0.116
+        elseif ping < 999999120 then
+            getgenv().Prediction = 0.120
+        elseif ping < 999999110 then
+            getgenv().Prediction = 0.124
+        elseif ping < 199999905 then
+            getgenv().Prediction = 0.127
+        elseif ping < 99999990 then
+            getgenv().Prediction = 0.130
+        elseif ping < 999999980 then
+            getgenv().Prediction = 0.133
+        elseif ping < 799999990 then
+            getgenv().Prediction = 0.136
+        elseif ping < 99999960 then
+            getgenv().Prediction = 0.15038
+        elseif ping < 59999990 then
+            getgenv().Prediction = 0.15038
+        elseif ping < 99999940 then
+            getgenv().Prediction = 0.145
+        elseif ping < 3999990 then
+            getgenv().Prediction = 0.155
+        elseif ping < 29999990 then
+            getgenv().Prediction = 0.157
+        end
+        end
+	end
+end)
+-------------------------
+-------------------------------------------
+-------------------------------------------
+-------------------------------
+tab2.newButton("da hood", "0.1234[C[Uppertorso]]", function()
+getgenv().Prediction = 0.1234
+getgenv().AimPart = "UpperTorso"
+getgenv().Key = "C"
+getgenv().DisableKey = "P"
+
+getgenv().FOV = true
+getgenv().ShowFOV = true
+getgenv().FOVSize = 50
+
+--// Variables (Service)
+
+local Players = game:GetService("Players")
+local RS = game:GetService("RunService")
+local WS = game:GetService("Workspace")
+local GS = game:GetService("GuiService")
+local SG = game:GetService("StarterGui")
+
+--// Variables (regular)
+
+local LP = Players.LocalPlayer
+local Mouse = LP:GetMouse()
+local Camera = WS.CurrentCamera
+local GetGuiInset = GS.GetGuiInset
+
+local AimlockState = true
+local Locked
+local Victim
+
+local SelectedKey = getgenv().Key
+local SelectedDisableKey = getgenv().DisableKey
+
+--// Notification function
+
+function Notify(tx)
+    SG:SetCore("SendNotification", {
+        Title = "Enabled ✔ | SIGMA YURI[PAID]",
+        Text = tx,
+        Duration = 5
+    })
+end
+
+--// Check if aimlock is loaded
+
+if getgenv().Loaded == true then
+    Notify("Aimlock is already loaded!")
+    return
+end
+
+getgenv().Loaded = true
+
+--// FOV Circle
+
+local fov = Drawing.new("Sqaure")
+fov.Filled = false
+fov.Transparency = 1
+fov.Thickness = 1
+fov.Color = Color3.fromRGB(255, 5, 100)
+fov.NumSides = 3
+
+--// Functions
+
+function update()
+    if getgenv().FOV == true then
+        if fov then
+            fov.Radius = getgenv().FOVSize * 2
+            fov.Visible = getgenv().ShowFOV
+            fov.Position = Vector2.new(Mouse.X, Mouse.Y + GetGuiInset(GS).Y)
+
+            return fov
+        end
+    end
+end
+
+function WTVP(arg)
+    return Camera:WorldToViewportPoint(arg)
+end
+
+function WTSP(arg)
+    return Camera.WorldToScreenPoint(Camera, arg)
+end
+
+function getClosest()
+    local closestPlayer
+    local shortestDistance = math.huge
+
+    for i, v in pairs(game.Players:GetPlayers()) do
+        local notKO = v.Character:WaitForChild("BodyEffects")["K.O"].Value ~= true
+        local notGrabbed = v.Character:FindFirstChild("GRABBING_COINSTRAINT") == nil
+        
+        if v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("Humanoid") and v.Character.Humanoid.Health ~= 0 and v.Character:FindFirstChild(getgenv().AimPart) and notKO and notGrabbed then
+            local pos = Camera:WorldToViewportPoint(v.Character.PrimaryPart.Position)
+            local magnitude = (Vector2.new(pos.X, pos.Y) - Vector2.new(Mouse.X, Mouse.Y)).magnitude
+            
+            if (getgenv().FOV) then
+                if (fov.Radius > magnitude and magnitude < shortestDistance) then
+                    closestPlayer = v
+                    shortestDistance = magnitude
+                end
+            else
+                if (magnitude < shortestDistance) then
+                    closestPlayer = v
+                    shortestDistance = magnitude
+                end
+            end
+        end
+    end
+    return closestPlayer
+end
+ 
+--// Checks if key is down
+
+Mouse.KeyDown:Connect(function(k)
+    SelectedKey = SelectedKey:lower()
+    SelectedDisableKey = SelectedDisableKey:lower()
+    if k == SelectedKey then
+        if AimlockState == true then
+            Locked = not Locked
+            if Locked then
+                Victim = getClosest()
+
+                Notify("Locked onto: "..tostring(Victim.Character.Humanoid.DisplayName))
+            else
+                if Victim ~= nil then
+                    Victim = nil
+
+                    Notify("Unlocked!")
+                end
+            end
+        else
+            Notify("Aimlock is not enabled!")
+        end
+    end
+    if k == SelectedDisableKey then
+        AimlockState = not AimlockState
+    end
+end)
+
+--// Loop update FOV and loop camera lock onto target
+
+RS.RenderStepped:Connect(function()
+    update()
+    if AimlockState == true then
+        if Victim ~= nil then
+            Camera.CFrame = CFrame.new(Camera.CFrame.p, Victim.Character[getgenv().AimPart].Position + Victim.Character[getgenv().AimPart].Velocity*getgenv().Prediction)
+        end
+    end
+end)
+	while wait() do
+        if getgenv().AutoPrediction == true then
+        local pingvalue = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()
+        local split = string.split(pingvalue,'(')
+        local ping = tonumber(split[1])
+            if ping < 252325 then
+            getgenv().Prediction = 1.4
+        elseif ping < 2199999995 then
+            getgenv().Prediction = 1.2
+	    elseif ping < 29999905 then
+            getgenv().Prediction = 1.0
+	    elseif ping < 1999990 then
+            getgenv().Prediction = 0.10
+        elseif ping < 18999990 then
+            getgenv().Prediction = 0.12
+	    elseif ping < 199999970 then
+            getgenv().Prediction = 0.15
+	    elseif ping < 19999960 then
+            getgenv().Prediction = 0.18
+	    elseif ping < 1999950 then
+            getgenv().Prediction = 0.110
+        elseif ping < 19999940 then
+            getgenv().Prediction = 0.113
+        elseif ping < 19999999930 then
+            getgenv().Prediction = 0.116
+        elseif ping < 999999120 then
+            getgenv().Prediction = 0.120
+        elseif ping < 999999110 then
+            getgenv().Prediction = 0.124
+        elseif ping < 199999905 then
+            getgenv().Prediction = 0.127
+        elseif ping < 99999990 then
+            getgenv().Prediction = 0.130
+        elseif ping < 999999980 then
+            getgenv().Prediction = 0.133
+        elseif ping < 799999990 then
+            getgenv().Prediction = 0.136
+        elseif ping < 99999960 then
+            getgenv().Prediction = 0.15038
+        elseif ping < 59999990 then
+            getgenv().Prediction = 0.15038
+        elseif ping < 99999940 then
+            getgenv().Prediction = 0.145
+        elseif ping < 3999990 then
+            getgenv().Prediction = 0.155
+        elseif ping < 29999990 then
+            getgenv().Prediction = 0.157
+        end
+        end
+	end
+end)
+----------------------------------------
+-----------------------------------------
+------------------------------------------
+tab2.newButton("da hood", "0.135[C[Uppertorso]]", function()
+getgenv().Prediction = 0.135
+getgenv().AimPart = "UpperTorso"
+getgenv().Key = "C"
+getgenv().DisableKey = "P"
+
+getgenv().FOV = true
+getgenv().ShowFOV = true
+getgenv().FOVSize = 50
+
+--// Variables (Service)
+
+local Players = game:GetService("Players")
+local RS = game:GetService("RunService")
+local WS = game:GetService("Workspace")
+local GS = game:GetService("GuiService")
+local SG = game:GetService("StarterGui")
+
+--// Variables (regular)
+
+local LP = Players.LocalPlayer
+local Mouse = LP:GetMouse()
+local Camera = WS.CurrentCamera
+local GetGuiInset = GS.GetGuiInset
+
+local AimlockState = true
+local Locked
+local Victim
+
+local SelectedKey = getgenv().Key
+local SelectedDisableKey = getgenv().DisableKey
+
+--// Notification function
+
+function Notify(tx)
+    SG:SetCore("SendNotification", {
+        Title = "Enabled ✔ | SIGMA YURI[PAID]",
+        Text = tx,
+        Duration = 5
+    })
+end
+
+--// Check if aimlock is loaded
+
+if getgenv().Loaded == true then
+    Notify("Aimlock is already loaded!")
+    return
+end
+
+getgenv().Loaded = true
+
+--// FOV Circle
+
+local fov = Drawing.new("Sqaure")
+fov.Filled = false
+fov.Transparency = 1
+fov.Thickness = 1
+fov.Color = Color3.fromRGB(255, 5, 100)
+fov.NumSides = 3
+
+--// Functions
+
+function update()
+    if getgenv().FOV == true then
+        if fov then
+            fov.Radius = getgenv().FOVSize * 2
+            fov.Visible = getgenv().ShowFOV
+            fov.Position = Vector2.new(Mouse.X, Mouse.Y + GetGuiInset(GS).Y)
+
+            return fov
+        end
+    end
+end
+
+function WTVP(arg)
+    return Camera:WorldToViewportPoint(arg)
+end
+
+function WTSP(arg)
+    return Camera.WorldToScreenPoint(Camera, arg)
+end
+
+function getClosest()
+    local closestPlayer
+    local shortestDistance = math.huge
+
+    for i, v in pairs(game.Players:GetPlayers()) do
+        local notKO = v.Character:WaitForChild("BodyEffects")["K.O"].Value ~= true
+        local notGrabbed = v.Character:FindFirstChild("GRABBING_COINSTRAINT") == nil
+        
+        if v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("Humanoid") and v.Character.Humanoid.Health ~= 0 and v.Character:FindFirstChild(getgenv().AimPart) and notKO and notGrabbed then
+            local pos = Camera:WorldToViewportPoint(v.Character.PrimaryPart.Position)
+            local magnitude = (Vector2.new(pos.X, pos.Y) - Vector2.new(Mouse.X, Mouse.Y)).magnitude
+            
+            if (getgenv().FOV) then
+                if (fov.Radius > magnitude and magnitude < shortestDistance) then
+                    closestPlayer = v
+                    shortestDistance = magnitude
+                end
+            else
+                if (magnitude < shortestDistance) then
+                    closestPlayer = v
+                    shortestDistance = magnitude
+                end
+            end
+        end
+    end
+    return closestPlayer
+end
+ 
+--// Checks if key is down
+
+Mouse.KeyDown:Connect(function(k)
+    SelectedKey = SelectedKey:lower()
+    SelectedDisableKey = SelectedDisableKey:lower()
+    if k == SelectedKey then
+        if AimlockState == true then
+            Locked = not Locked
+            if Locked then
+                Victim = getClosest()
+
+                Notify("Locked onto: "..tostring(Victim.Character.Humanoid.DisplayName))
+            else
+                if Victim ~= nil then
+                    Victim = nil
+
+                    Notify("Unlocked!")
+                end
+            end
+        else
+            Notify("Aimlock is not enabled!")
+        end
+    end
+    if k == SelectedDisableKey then
+        AimlockState = not AimlockState
+    end
+end)
+
+--// Loop update FOV and loop camera lock onto target
+
+RS.RenderStepped:Connect(function()
+    update()
+    if AimlockState == true then
+        if Victim ~= nil then
+            Camera.CFrame = CFrame.new(Camera.CFrame.p, Victim.Character[getgenv().AimPart].Position + Victim.Character[getgenv().AimPart].Velocity*getgenv().Prediction)
+        end
+    end
+end)
+	while wait() do
+        if getgenv().AutoPrediction == true then
+        local pingvalue = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()
+        local split = string.split(pingvalue,'(')
+        local ping = tonumber(split[1])
+            if ping < 252325 then
+            getgenv().Prediction = 1.4
+        elseif ping < 2199999995 then
+            getgenv().Prediction = 1.2
+	    elseif ping < 29999905 then
+            getgenv().Prediction = 1.0
+	    elseif ping < 1999990 then
+            getgenv().Prediction = 0.10
+        elseif ping < 18999990 then
+            getgenv().Prediction = 0.12
+	    elseif ping < 199999970 then
+            getgenv().Prediction = 0.15
+	    elseif ping < 19999960 then
+            getgenv().Prediction = 0.18
+	    elseif ping < 1999950 then
+            getgenv().Prediction = 0.110
+        elseif ping < 19999940 then
+            getgenv().Prediction = 0.113
+        elseif ping < 19999999930 then
+            getgenv().Prediction = 0.116
+        elseif ping < 999999120 then
+            getgenv().Prediction = 0.120
+        elseif ping < 999999110 then
+            getgenv().Prediction = 0.124
+        elseif ping < 199999905 then
+            getgenv().Prediction = 0.127
+        elseif ping < 99999990 then
+            getgenv().Prediction = 0.130
+        elseif ping < 999999980 then
+            getgenv().Prediction = 0.133
+        elseif ping < 799999990 then
+            getgenv().Prediction = 0.136
+        elseif ping < 99999960 then
+            getgenv().Prediction = 0.15038
+        elseif ping < 59999990 then
+            getgenv().Prediction = 0.15038
+        elseif ping < 99999940 then
+            getgenv().Prediction = 0.145
+        elseif ping < 3999990 then
+            getgenv().Prediction = 0.155
+        elseif ping < 29999990 then
+            getgenv().Prediction = 0.157
+        end
+        end
+	end
+end)
+
+----==================================+++++++++++++++++++++
+tab2.newButton("1v1 hood", "0.115[C[Uppertorso]]", function()
+getgenv().Prediction = 0.115
+getgenv().AimPart = "UpperTorso"
+getgenv().Key = "C"
+getgenv().DisableKey = "P"
+
+getgenv().FOV = true
+getgenv().ShowFOV = true
+getgenv().FOVSize = 50
+
+--// Variables (Service)
+
+local Players = game:GetService("Players")
+local RS = game:GetService("RunService")
+local WS = game:GetService("Workspace")
+local GS = game:GetService("GuiService")
+local SG = game:GetService("StarterGui")
+
+--// Variables (regular)
+
+local LP = Players.LocalPlayer
+local Mouse = LP:GetMouse()
+local Camera = WS.CurrentCamera
+local GetGuiInset = GS.GetGuiInset
+
+local AimlockState = true
+local Locked
+local Victim
+
+local SelectedKey = getgenv().Key
+local SelectedDisableKey = getgenv().DisableKey
+
+--// Notification function
+
+function Notify(tx)
+    SG:SetCore("SendNotification", {
+        Title = "Enabled ✔ | SIGMA YURI[PAID]",
+        Text = tx,
+        Duration = 5
+    })
+end
+
+--// Check if aimlock is loaded
+
+if getgenv().Loaded == true then
+    Notify("Aimlock is already loaded!")
+    return
+end
+
+getgenv().Loaded = true
+
+--// FOV Circle
+
+local fov = Drawing.new("Sqaure")
+fov.Filled = false
+fov.Transparency = 1
+fov.Thickness = 1
+fov.Color = Color3.fromRGB(255, 5, 100)
+fov.NumSides = 3
+
+--// Functions
+
+function update()
+    if getgenv().FOV == true then
+        if fov then
+            fov.Radius = getgenv().FOVSize * 2
+            fov.Visible = getgenv().ShowFOV
+            fov.Position = Vector2.new(Mouse.X, Mouse.Y + GetGuiInset(GS).Y)
+
+            return fov
+        end
+    end
+end
+
+function WTVP(arg)
+    return Camera:WorldToViewportPoint(arg)
+end
+
+function WTSP(arg)
+    return Camera.WorldToScreenPoint(Camera, arg)
+end
+
+function getClosest()
+    local closestPlayer
+    local shortestDistance = math.huge
+
+    for i, v in pairs(game.Players:GetPlayers()) do
+        local notKO = v.Character:WaitForChild("BodyEffects")["K.O"].Value ~= true
+        local notGrabbed = v.Character:FindFirstChild("GRABBING_COINSTRAINT") == nil
+        
+        if v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("Humanoid") and v.Character.Humanoid.Health ~= 0 and v.Character:FindFirstChild(getgenv().AimPart) and notKO and notGrabbed then
+            local pos = Camera:WorldToViewportPoint(v.Character.PrimaryPart.Position)
+            local magnitude = (Vector2.new(pos.X, pos.Y) - Vector2.new(Mouse.X, Mouse.Y)).magnitude
+            
+            if (getgenv().FOV) then
+                if (fov.Radius > magnitude and magnitude < shortestDistance) then
+                    closestPlayer = v
+                    shortestDistance = magnitude
+                end
+            else
+                if (magnitude < shortestDistance) then
+                    closestPlayer = v
+                    shortestDistance = magnitude
+                end
+            end
+        end
+    end
+    return closestPlayer
+end
+ 
+--// Checks if key is down
+
+Mouse.KeyDown:Connect(function(k)
+    SelectedKey = SelectedKey:lower()
+    SelectedDisableKey = SelectedDisableKey:lower()
+    if k == SelectedKey then
+        if AimlockState == true then
+            Locked = not Locked
+            if Locked then
+                Victim = getClosest()
+
+                Notify("Locked onto: "..tostring(Victim.Character.Humanoid.DisplayName))
+            else
+                if Victim ~= nil then
+                    Victim = nil
+
+                    Notify("Unlocked!")
+                end
+            end
+        else
+            Notify("Aimlock is not enabled!")
+        end
+    end
+    if k == SelectedDisableKey then
+        AimlockState = not AimlockState
+    end
+end)
+
+--// Loop update FOV and loop camera lock onto target
+
+RS.RenderStepped:Connect(function()
+    update()
+    if AimlockState == true then
+        if Victim ~= nil then
+            Camera.CFrame = CFrame.new(Camera.CFrame.p, Victim.Character[getgenv().AimPart].Position + Victim.Character[getgenv().AimPart].Velocity*getgenv().Prediction)
+        end
+    end
+end)
+	while wait() do
+        if getgenv().AutoPrediction == true then
+        local pingvalue = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()
+        local split = string.split(pingvalue,'(')
+        local ping = tonumber(split[1])
+            if ping < 252325 then
+            getgenv().Prediction = 1.4
+        elseif ping < 2199999995 then
+            getgenv().Prediction = 1.2
+	    elseif ping < 29999905 then
+            getgenv().Prediction = 1.0
+	    elseif ping < 1999990 then
+            getgenv().Prediction = 0.10
+        elseif ping < 18999990 then
+            getgenv().Prediction = 0.12
+	    elseif ping < 199999970 then
+            getgenv().Prediction = 0.15
+	    elseif ping < 19999960 then
+            getgenv().Prediction = 0.18
+	    elseif ping < 1999950 then
+            getgenv().Prediction = 0.110
+        elseif ping < 19999940 then
+            getgenv().Prediction = 0.113
+        elseif ping < 19999999930 then
+            getgenv().Prediction = 0.116
+        elseif ping < 999999120 then
+            getgenv().Prediction = 0.120
+        elseif ping < 999999110 then
+            getgenv().Prediction = 0.124
+        elseif ping < 199999905 then
+            getgenv().Prediction = 0.127
+        elseif ping < 99999990 then
+            getgenv().Prediction = 0.130
+        elseif ping < 999999980 then
+            getgenv().Prediction = 0.133
+        elseif ping < 799999990 then
+            getgenv().Prediction = 0.136
+        elseif ping < 99999960 then
+            getgenv().Prediction = 0.15038
+        elseif ping < 59999990 then
+            getgenv().Prediction = 0.15038
+        elseif ping < 99999940 then
+            getgenv().Prediction = 0.145
+        elseif ping < 3999990 then
+            getgenv().Prediction = 0.155
+        elseif ping < 29999990 then
+            getgenv().Prediction = 0.157
+        end
+        end
+	end
+end)
+---------======================---------------+++++++86235462354876325746532745273fhwgedvbjfbvweujhgfv
+tab2.newButton("1v1 hood", "0.124[C[Uppertorso]]", function()
+getgenv().Prediction = 0.124
+getgenv().AimPart = "UpperTorso"
+getgenv().Key = "C"
+getgenv().DisableKey = "P"
+
+getgenv().FOV = true
+getgenv().ShowFOV = true
+getgenv().FOVSize = 50
+
+--// Variables (Service)
+
+local Players = game:GetService("Players")
+local RS = game:GetService("RunService")
+local WS = game:GetService("Workspace")
+local GS = game:GetService("GuiService")
+local SG = game:GetService("StarterGui")
+
+--// Variables (regular)
+
+local LP = Players.LocalPlayer
+local Mouse = LP:GetMouse()
+local Camera = WS.CurrentCamera
+local GetGuiInset = GS.GetGuiInset
+
+local AimlockState = true
+local Locked
+local Victim
+
+local SelectedKey = getgenv().Key
+local SelectedDisableKey = getgenv().DisableKey
+
+--// Notification function
+
+function Notify(tx)
+    SG:SetCore("SendNotification", {
+        Title = "Enabled ✔ | SIGMA YURI[PAID]",
+        Text = tx,
+        Duration = 5
+    })
+end
+
+--// Check if aimlock is loaded
+
+if getgenv().Loaded == true then
+    Notify("Aimlock is already loaded!")
+    return
+end
+
+getgenv().Loaded = true
+
+--// FOV Circle
+
+local fov = Drawing.new("Sqaure")
+fov.Filled = false
+fov.Transparency = 1
+fov.Thickness = 1
+fov.Color = Color3.fromRGB(255, 5, 100)
+fov.NumSides = 3
+
+--// Functions
+
+function update()
+    if getgenv().FOV == true then
+        if fov then
+            fov.Radius = getgenv().FOVSize * 2
+            fov.Visible = getgenv().ShowFOV
+            fov.Position = Vector2.new(Mouse.X, Mouse.Y + GetGuiInset(GS).Y)
+
+            return fov
+        end
+    end
+end
+
+function WTVP(arg)
+    return Camera:WorldToViewportPoint(arg)
+end
+
+function WTSP(arg)
+    return Camera.WorldToScreenPoint(Camera, arg)
+end
+
+function getClosest()
+    local closestPlayer
+    local shortestDistance = math.huge
+
+    for i, v in pairs(game.Players:GetPlayers()) do
+        local notKO = v.Character:WaitForChild("BodyEffects")["K.O"].Value ~= true
+        local notGrabbed = v.Character:FindFirstChild("GRABBING_COINSTRAINT") == nil
+        
+        if v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("Humanoid") and v.Character.Humanoid.Health ~= 0 and v.Character:FindFirstChild(getgenv().AimPart) and notKO and notGrabbed then
+            local pos = Camera:WorldToViewportPoint(v.Character.PrimaryPart.Position)
+            local magnitude = (Vector2.new(pos.X, pos.Y) - Vector2.new(Mouse.X, Mouse.Y)).magnitude
+            
+            if (getgenv().FOV) then
+                if (fov.Radius > magnitude and magnitude < shortestDistance) then
+                    closestPlayer = v
+                    shortestDistance = magnitude
+                end
+            else
+                if (magnitude < shortestDistance) then
+                    closestPlayer = v
+                    shortestDistance = magnitude
+                end
+            end
+        end
+    end
+    return closestPlayer
+end
+ 
+--// Checks if key is down
+
+Mouse.KeyDown:Connect(function(k)
+    SelectedKey = SelectedKey:lower()
+    SelectedDisableKey = SelectedDisableKey:lower()
+    if k == SelectedKey then
+        if AimlockState == true then
+            Locked = not Locked
+            if Locked then
+                Victim = getClosest()
+
+                Notify("Locked onto: "..tostring(Victim.Character.Humanoid.DisplayName))
+            else
+                if Victim ~= nil then
+                    Victim = nil
+
+                    Notify("Unlocked!")
+                end
+            end
+        else
+            Notify("Aimlock is not enabled!")
+        end
+    end
+    if k == SelectedDisableKey then
+        AimlockState = not AimlockState
+    end
+end)
+
+--// Loop update FOV and loop camera lock onto target
+
+RS.RenderStepped:Connect(function()
+    update()
+    if AimlockState == true then
+        if Victim ~= nil then
+            Camera.CFrame = CFrame.new(Camera.CFrame.p, Victim.Character[getgenv().AimPart].Position + Victim.Character[getgenv().AimPart].Velocity*getgenv().Prediction)
+        end
+    end
+end)
+	while wait() do
+        if getgenv().AutoPrediction == true then
+        local pingvalue = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()
+        local split = string.split(pingvalue,'(')
+        local ping = tonumber(split[1])
+            if ping < 252325 then
+            getgenv().Prediction = 1.4
+        elseif ping < 2199999995 then
+            getgenv().Prediction = 1.2
+	    elseif ping < 29999905 then
+            getgenv().Prediction = 1.0
+	    elseif ping < 1999990 then
+            getgenv().Prediction = 0.10
+        elseif ping < 18999990 then
+            getgenv().Prediction = 0.12
+	    elseif ping < 199999970 then
+            getgenv().Prediction = 0.15
+	    elseif ping < 19999960 then
+            getgenv().Prediction = 0.18
+	    elseif ping < 1999950 then
+            getgenv().Prediction = 0.110
+        elseif ping < 19999940 then
+            getgenv().Prediction = 0.113
+        elseif ping < 19999999930 then
+            getgenv().Prediction = 0.116
+        elseif ping < 999999120 then
+            getgenv().Prediction = 0.120
+        elseif ping < 999999110 then
+            getgenv().Prediction = 0.124
+        elseif ping < 199999905 then
+            getgenv().Prediction = 0.127
+        elseif ping < 99999990 then
+            getgenv().Prediction = 0.130
+        elseif ping < 999999980 then
+            getgenv().Prediction = 0.133
+        elseif ping < 799999990 then
+            getgenv().Prediction = 0.136
+        elseif ping < 99999960 then
+            getgenv().Prediction = 0.15038
+        elseif ping < 59999990 then
+            getgenv().Prediction = 0.15038
+        elseif ping < 99999940 then
+            getgenv().Prediction = 0.145
+        elseif ping < 3999990 then
+            getgenv().Prediction = 0.155
+        elseif ping < 29999990 then
+            getgenv().Prediction = 0.157
+        end
+        end
+	end
+end)
+--------------------------------------------------
+----------------------------------------------
+-------------------------------end of aimbot tab now starting visuals!
+tab3.newButton("esp SKELETON", "skeleton esp[may cause lag]", function()
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/Blissful4992/ESPs/refs/heads/main/SkeletonESP.lua"))()
+end)
+
+--------------
+
+tab3.newButton("head tracers", "puts a line where there looking", function()
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/therangedpayeer/headlinesv1/refs/heads/main/YES%20__%20head%20tracders"))()
+end)
+----------------------
+
+
+tab3.newButton("body color", "clearish red ", function()
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+
+-- Function to make the character half-see-through and red
+local function makeCharacterRedAndSeeThrough()
+    -- Loop through all parts in the character and apply the effect
+    for _, part in pairs(character:GetChildren()) do
+        if part:IsA("BasePart") then
+            -- Make part half-see-through (transparency 0.5)
+            part.Transparency = 0.8
+            -- Change part color to red
+            part.Color = Color3.fromRGB(255, 0, 0)
+        end
+    end
+end
+
+-- Call the function when the character is added
+character:WaitForChild("HumanoidRootPart") -- Ensure the character is fully loaded before applying the changes
+makeCharacterRedAndSeeThrough()
+
+end)
+
+---------------------
+
+tab3.newButton("body color", "clearish white ", function()
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+
+-- Function to make the character half-see-through and red
+local function makeCharacterRedAndSeeThrough()
+    -- Loop through all parts in the character and apply the effect
+    for _, part in pairs(character:GetChildren()) do
+        if part:IsA("BasePart") then
+            -- Make part half-see-through (transparency 0.5)
+            part.Transparency = 0.8
+            -- Change part color to red
+            part.Color = Color3.fromRGB(255, 255, 255)
+        end
+    end
+end
+
+-- Call the function when the character is added
+character:WaitForChild("HumanoidRootPart") -- Ensure the character is fully loaded before applying the changes
+makeCharacterRedAndSeeThrough()
+
+end)
+
+
+---------------------------
+
+
+
+tab3.newButton("body color", "rainbow torso[neon]", function()
+
+-- LocalScript inside StarterPlayer -> StarterCharacterScripts
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local torso = character:WaitForChild("Torso") -- or "LowerTorso" depending on the avatar model
+local neonMaterial = Enum.Material.SmoothPlastic
+
+-- Function to change color to a random neon color
+local function changeTorsoColor()
+    while true do
+        local randomColor = Color3.fromHSV(math.random(), 1, 1) -- Random hue for bright neon colors
+        torso.BrickColor = BrickColor.new(randomColor) -- Update torso color
+        torso.Material = neonMaterial -- Set the material to SmoothPlastic to create a neon look
+        wait(1) -- Change color every 1 second (adjust for speed)
+    end
+end
+
+-- Start changing the color
+changeTorsoColor()
+
+
+end)
+tab3.newButton("body color", "rainbow glass", function()
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+
+-- Function to apply neon material and make head invisible
+local function applyNeonEffect()
+    -- Wait for the character to fully load
+    character:WaitForChild("Head")
+
+    -- Make the head invisible
+    local head = character:FindFirstChild("Head")
+    if head then
+        head.Transparency = 1 -- Fully invisible head
+        head.CanCollide = false -- Disable collision for the head
+    end
+
+    -- Apply neon material and color-changing effect to body parts
+    for _, part in pairs(character:GetChildren()) do
+        if part:IsA("BasePart") and part.Name ~= "Head" then
+            part.Material = Enum.Material.ForceField
+        end
+    end
+end
+
+-- Function to continuously change the colors of body parts
+local function changeBodyColors()
+    while true do
+        local time = tick()  -- Get current time
+        local colorValue = math.sin(time) / 2 + 0.5 -- Smooth color oscillation
+
+        -- Calculate a new color based on the oscillation value
+        local color = Color3.fromHSV(colorValue, 1, 1)  -- Change color over time (Rainbow effect)
+
+        -- Apply the color to each part (except head)
+        for _, part in pairs(character:GetChildren()) do
+            if part:IsA("BasePart") and part.Name ~= "Head" then
+                part.Color = color
+            end
+        end
+
+        wait(0.0000000000000000000000000000005)  -- Wait for a short time before the next color update
+    end
+end
+
+-- Apply effects when the character is loaded or respawns
+character:WaitForChild("HumanoidRootPart")
+applyNeonEffect()
+
+-- Start color-changing loop
+spawn(changeBodyColors)
+
+-- Apply the effects when the character respawns
+player.CharacterAdded:Connect(function(char)
+    character = char
+    character:WaitForChild("HumanoidRootPart")
+    applyNeonEffect()
+    spawn(changeBodyColors)  -- Start the color-changing effect again after respawn
+end)
+end)
+
+
+tab3.newButton("body color", "rainbow neon", function()
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+
+-- Function to apply neon material and make head invisible
+local function applyNeonEffect()
+    -- Wait for the character to fully load
+    character:WaitForChild("Head")
+
+    -- Make the head invisible
+    local head = character:FindFirstChild("Head")
+    if head then
+        head.Transparency = 1 -- Fully invisible head
+        head.CanCollide = false -- Disable collision for the head
+    end
+
+    -- Apply neon material and color-changing effect to body parts
+    for _, part in pairs(character:GetChildren()) do
+        if part:IsA("BasePart") and part.Name ~= "Head" then
+            part.Material = Enum.Material.Neon
+        end
+    end
+end
+
+-- Function to continuously change the colors of body parts
+local function changeBodyColors()
+    while true do
+        local time = tick()  -- Get current time
+        local colorValue = math.sin(time) / 2 + 0.5 -- Smooth color oscillation
+
+        -- Calculate a new color based on the oscillation value
+        local color = Color3.fromHSV(colorValue, 1, 1)  -- Change color over time (Rainbow effect)
+
+        -- Apply the color to each part (except head)
+        for _, part in pairs(character:GetChildren()) do
+            if part:IsA("BasePart") and part.Name ~= "Head" then
+                part.Color = color
+            end
+        end
+
+        wait(0.0000000000000000000000000000005)  -- Wait for a short time before the next color update
+    end
+end
+
+-- Apply effects when the character is loaded or respawns
+character:WaitForChild("HumanoidRootPart")
+applyNeonEffect()
+
+-- Start color-changing loop
+spawn(changeBodyColors)
+
+-- Apply the effects when the character respawns
+player.CharacterAdded:Connect(function(char)
+    character = char
+    character:WaitForChild("HumanoidRootPart")
+    applyNeonEffect()
+    spawn(changeBodyColors)  -- Start the color-changing effect again after respawn
+end)
+end)
+
+
+----------------------------------end of visual now presets! just all that took 4 hours... its no 2:54
+
+
+
+tab4.newButton("body resize", "head [1.3][best]", function()
+_G.HeadSize = 1.3 _G.Disabled = true game:GetService('RunService').RenderStepped:connect(function() if _G.Disabled then for i,v in next, game:GetService('Players'):GetPlayers() do if v.Name ~= game:GetService('Players').LocalPlayer.Name then pcall(function() v.Character.Head.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize) v.Character.Head.Transparency = 5 v.Character.Head.BrickColor = BrickColor.new("Yellow") v.Character.Head.Material = "Neon" v.Character.Head.CanCollide = false v.Character.Head.Massless = true end) end end end end)
+end)
+-----------------+=++++++++==+=
+----------------
+tab4.newButton("body resize", "head [2.6][decent]", function()
+_G.HeadSize = 2.6 _G.Disabled = true game:GetService('RunService').RenderStepped:connect(function() if _G.Disabled then for i,v in next, game:GetService('Players'):GetPlayers() do if v.Name ~= game:GetService('Players').LocalPlayer.Name then pcall(function() v.Character.Head.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize) v.Character.Head.Transparency = 5 v.Character.Head.BrickColor = BrickColor.new("Yellow") v.Character.Head.Material = "Neon" v.Character.Head.CanCollide = false v.Character.Head.Massless = true end) end end end end)
+end)
+
+-----------------+=++++++++==+=
+----------------
+tab4.newButton("body resize", "head [3][its ok..]", function()
+_G.HeadSize = 3 _G.Disabled = true game:GetService('RunService').RenderStepped:connect(function() if _G.Disabled then for i,v in next, game:GetService('Players'):GetPlayers() do if v.Name ~= game:GetService('Players').LocalPlayer.Name then pcall(function() v.Character.Head.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize) v.Character.Head.Transparency = 5 v.Character.Head.BrickColor = BrickColor.new("Yellow") v.Character.Head.Material = "Neon" v.Character.Head.CanCollide = false v.Character.Head.Massless = true end) end end end end)
+end)
+------------------------------
+-----------------------------
+tab4.newButton("body resize", "torso [2.4][decent]", function()
+_G.TorsoSize = 2.4 _G.Disabled = true game:GetService('RunService').RenderStepped:connect(function() if _G.Disabled then for i,v in next, game:GetService('Players'):GetPlayers() do if v.Name ~= game:GetService('Players').LocalPlayer.Name then pcall(function() v.Character.Torso.Size = Vector3.new(_G.TorsoSize,_G.TorsoSize,_G.TorsoSize) v.Character.Torso.Transparency = 5 v.Character.Torso.BrickColor = BrickColor.new("Yellow") v.Character.Torso.Material = "Neon" v.Character.Torso.CanCollide = false v.Character.Torso.Massless = true end) end end end end)
+end)
+
+
+tab4.newButton("body resize", "torso [1.8][best]", function()
+_G.TorsoSize = 1.8 _G.Disabled = true game:GetService('RunService').RenderStepped:connect(function() if _G.Disabled then for i,v in next, game:GetService('Players'):GetPlayers() do if v.Name ~= game:GetService('Players').LocalPlayer.Name then pcall(function() v.Character.Torso.Size = Vector3.new(_G.TorsoSize,_G.TorsoSize,_G.TorsoSize) v.Character.Torso.Transparency = 5 v.Character.Torso.BrickColor = BrickColor.new("Yellow") v.Character.Torso.Material = "Neon" v.Character.Torso.CanCollide = false v.Character.Torso.Massless = true end) end end end end)
+end)
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------
