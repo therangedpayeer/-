@@ -220,7 +220,7 @@ end)
 tab1.newButton("Spinbot", "makes your character spin in a werid way", function()
     -- SIGMA YURI PAID YAYYAYYAYAY
  
-power = 1200 -- change this to make it more or less powerful
+power = 800 -- change this to make it more or less powerful
  
 game:GetService('RunService').Stepped:connect(function()
 game.Players.LocalPlayer.Character.Head.CanCollide = false
@@ -1160,11 +1160,11 @@ getgenv().Loaded = true
 
 --// FOV Circle
 
-local fov = Drawing.new("Sqaure")
+local fov = Drawing.new("Circle")
 fov.Filled = false
 fov.Transparency = 1
 fov.Thickness = 1
-fov.Color = Color3.fromRGB(250, 230, 18)
+fov.Color = Color3.fromRGB(22, 225, 139)
 fov.NumSides = 3
 
 --// Functions
