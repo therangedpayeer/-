@@ -265,7 +265,7 @@ local fov = Drawing.new("Circle")
 fov.Filled = false
 fov.Transparency = 1
 fov.Thickness = 1
-fov.Color = Color3.fromRGB(255, 5, 100)
+fov.Color = Color3.fromRGB(2, 5, 139)
 fov.NumSides = 3
 
 --// Functions
@@ -469,9 +469,9 @@ getgenv().Loaded = true
 
 local fov = Drawing.new("Circle")
 fov.Filled = false
-fov.Transparency = 1
+fov.Transparency = 0.6
 fov.Thickness = 1
-fov.Color = Color3.fromRGB(255, 5, 100)
+fov.Color = Color3.fromRGB(0, 0, 139)
 fov.NumSides = 3
 
 --// Functions
@@ -675,7 +675,7 @@ local fov = Drawing.new("Sqaure")
 fov.Filled = false
 fov.Transparency = 1
 fov.Thickness = 1
-fov.Color = Color3.fromRGB(255, 5, 100)
+fov.Color = Color3.fromRGB(2, 35, 197)
 fov.NumSides = 3
 
 --// Functions
@@ -876,9 +876,9 @@ getgenv().Loaded = true
 
 local fov = Drawing.new("Sqaure")
 fov.Filled = false
-fov.Transparency = 1
+fov.Transparency = 0.7
 fov.Thickness = 1
-fov.Color = Color3.fromRGB(255, 5, 100)
+fov.Color = Color3.fromRGB(30, 30, 100)
 fov.NumSides = 3
 
 --// Functions
@@ -1080,7 +1080,7 @@ local fov = Drawing.new("Sqaure")
 fov.Filled = false
 fov.Transparency = 1
 fov.Thickness = 1
-fov.Color = Color3.fromRGB(255, 5, 100)
+fov.Color = Color3.fromRGB(25, 135, 76)
 fov.NumSides = 3
 
 --// Functions
@@ -1283,7 +1283,7 @@ local fov = Drawing.new("Sqaure")
 fov.Filled = false
 fov.Transparency = 1
 fov.Thickness = 1
-fov.Color = Color3.fromRGB(255, 5, 100)
+fov.Color = Color3.fromRGB(255, 75, 255)
 fov.NumSides = 3
 
 --// Functions
@@ -1686,7 +1686,7 @@ local fov = Drawing.new("Sqaure")
 fov.Filled = false
 fov.Transparency = 1
 fov.Thickness = 1
-fov.Color = Color3.fromRGB(255, 5, 100)
+fov.Color = Color3.fromRGB(255, 176, 100)
 fov.NumSides = 3
 
 --// Functions
@@ -2246,12 +2246,12 @@ end)
 
 
 
-tab4.newButton("body resize", "head [1.3][best]", function()
+tab4.newButton("body resize", "head [1.3][best]HOODCUSTOMS", function()
 _G.HeadSize = 1.3 _G.Disabled = true game:GetService('RunService').RenderStepped:connect(function() if _G.Disabled then for i,v in next, game:GetService('Players'):GetPlayers() do if v.Name ~= game:GetService('Players').LocalPlayer.Name then pcall(function() v.Character.Head.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize) v.Character.Head.Transparency = 5 v.Character.Head.BrickColor = BrickColor.new("Yellow") v.Character.Head.Material = "Neon" v.Character.Head.CanCollide = false v.Character.Head.Massless = true end) end end end end)
 end)
 -----------------+=++++++++==+=
 ----------------
-tab4.newButton("body resize", "head [2.6][decent]", function()
+tab4.newButton("body resize", "head [2.6][decent]HOODCUSTOMS", function()
 _G.HeadSize = 2.6 _G.Disabled = true game:GetService('RunService').RenderStepped:connect(function() if _G.Disabled then for i,v in next, game:GetService('Players'):GetPlayers() do if v.Name ~= game:GetService('Players').LocalPlayer.Name then pcall(function() v.Character.Head.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize) v.Character.Head.Transparency = 5 v.Character.Head.BrickColor = BrickColor.new("Yellow") v.Character.Head.Material = "Neon" v.Character.Head.CanCollide = false v.Character.Head.Massless = true end) end end end end)
 end)
 
@@ -2262,15 +2262,52 @@ _G.HeadSize = 3 _G.Disabled = true game:GetService('RunService').RenderStepped:c
 end)
 ------------------------------
 -----------------------------
-tab4.newButton("body resize", "torso [2.4][decent]", function()
+tab4.newButton("body resize", "torso [2.4][decent]HOODCUSTOMS", function()
 _G.TorsoSize = 2.4 _G.Disabled = true game:GetService('RunService').RenderStepped:connect(function() if _G.Disabled then for i,v in next, game:GetService('Players'):GetPlayers() do if v.Name ~= game:GetService('Players').LocalPlayer.Name then pcall(function() v.Character.Torso.Size = Vector3.new(_G.TorsoSize,_G.TorsoSize,_G.TorsoSize) v.Character.Torso.Transparency = 5 v.Character.Torso.BrickColor = BrickColor.new("Yellow") v.Character.Torso.Material = "Neon" v.Character.Torso.CanCollide = false v.Character.Torso.Massless = true end) end end end end)
 end)
 
 
-tab4.newButton("body resize", "torso [1.8][best]", function()
+tab4.newButton("body resize", "torso [1.8][best]HOODCUSTOMS", function()
 _G.TorsoSize = 1.8 _G.Disabled = true game:GetService('RunService').RenderStepped:connect(function() if _G.Disabled then for i,v in next, game:GetService('Players'):GetPlayers() do if v.Name ~= game:GetService('Players').LocalPlayer.Name then pcall(function() v.Character.Torso.Size = Vector3.new(_G.TorsoSize,_G.TorsoSize,_G.TorsoSize) v.Character.Torso.Transparency = 5 v.Character.Torso.BrickColor = BrickColor.new("Yellow") v.Character.Torso.Material = "Neon" v.Character.Torso.CanCollide = false v.Character.Torso.Massless = true end) end end end end)
 end)
 
+-------------
+
+
+tab4.newButton("body resize", "torso [5][smallHB]DAHOOD", function()
+_G.TorsoSize = 5.3 _G.Disabled = true game:GetService('RunService').RenderStepped:connect(function() if _G.Disabled then for i,v in next, game:GetService('Players'):GetPlayers() do if v.Name ~= game:GetService('Players').LocalPlayer.Name then pcall(function() v.Character.Torso.Size = Vector3.new(_G.TorsoSize,_G.TorsoSize,_G.TorsoSize) v.Character.Torso.Transparency = 5 v.Character.Torso.BrickColor = BrickColor.new("Yellow") v.Character.Torso.Material = "Neon" v.Character.Torso.CanCollide = false v.Character.Torso.Massless = true end) end end end end)
+end)
+-------------------------------
+tab4.newButton("body resize", "torso [5][hugeHB]DAHOOD", function()
+_G.TorsoSize = 15 _G.Disabled = true game:GetService('RunService').RenderStepped:connect(function() if _G.Disabled then for i,v in next, game:GetService('Players'):GetPlayers() do if v.Name ~= game:GetService('Players').LocalPlayer.Name then pcall(function() v.Character.Torso.Size = Vector3.new(_G.TorsoSize,_G.TorsoSize,_G.TorsoSize) v.Character.Torso.Transparency = 5 v.Character.Torso.BrickColor = BrickColor.new("Yellow") v.Character.Torso.Material = "Neon" v.Character.Torso.CanCollide = false v.Character.Torso.Massless = true end) end end end end)
+end)
+
+tab4.newButton("body resize", "torso [5][MAX SIZE]DAHOOD", function()
+_G.TorsoSize = 30.3 _G.Disabled = true game:GetService('RunService').RenderStepped:connect(function() if _G.Disabled then for i,v in next, game:GetService('Players'):GetPlayers() do if v.Name ~= game:GetService('Players').LocalPlayer.Name then pcall(function() v.Character.Torso.Size = Vector3.new(_G.TorsoSize,_G.TorsoSize,_G.TorsoSize) v.Character.Torso.Transparency = 5 v.Character.Torso.BrickColor = BrickColor.new("Yellow") v.Character.Torso.Material = "Neon" v.Character.Torso.CanCollide = false v.Character.Torso.Massless = true end) end end end end)
+end)
+
+
+--------------------
+tab4.newButton("body resize", "head [3][LEGIT LOOKING]DAHOOD", function()
+_G.HeadSize = 3 _G.Disabled = true game:GetService('RunService').RenderStepped:connect(function() if _G.Disabled then for i,v in next, game:GetService('Players'):GetPlayers() do if v.Name ~= game:GetService('Players').LocalPlayer.Name then pcall(function() v.Character.Head.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize) v.Character.Head.Transparency = 5 v.Character.Head.BrickColor = BrickColor.new("Yellow") v.Character.Head.Material = "Neon" v.Character.Head.CanCollide = false v.Character.Head.Massless = true end) end end end end)
+end)
+------
+
+tab4.newButton("body resize", "head [8][blatant]DAHOOD", function()
+_G.HeadSize = 8 _G.Disabled = true game:GetService('RunService').RenderStepped:connect(function() if _G.Disabled then for i,v in next, game:GetService('Players'):GetPlayers() do if v.Name ~= game:GetService('Players').LocalPlayer.Name then pcall(function() v.Character.Head.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize) v.Character.Head.Transparency = 5 v.Character.Head.BrickColor = BrickColor.new("Yellow") v.Character.Head.Material = "Neon" v.Character.Head.CanCollide = false v.Character.Head.Massless = true end) end end end end)
+end)
+
+------
+
+tab4.newButton("body resize", "head [15][huge]DAHOOD", function()
+_G.HeadSize = 15 _G.Disabled = true game:GetService('RunService').RenderStepped:connect(function() if _G.Disabled then for i,v in next, game:GetService('Players'):GetPlayers() do if v.Name ~= game:GetService('Players').LocalPlayer.Name then pcall(function() v.Character.Head.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize) v.Character.Head.Transparency = 5 v.Character.Head.BrickColor = BrickColor.new("Yellow") v.Character.Head.Material = "Neon" v.Character.Head.CanCollide = false v.Character.Head.Massless = true end) end end end end)
+end)
+
+------
+
+tab4.newButton("body resize", "head [8][MAX SIZE]DAHOOD", function()
+_G.HeadSize = 30.1 _G.Disabled = true game:GetService('RunService').RenderStepped:connect(function() if _G.Disabled then for i,v in next, game:GetService('Players'):GetPlayers() do if v.Name ~= game:GetService('Players').LocalPlayer.Name then pcall(function() v.Character.Head.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize) v.Character.Head.Transparency = 5 v.Character.Head.BrickColor = BrickColor.new("Yellow") v.Character.Head.Material = "Neon" v.Character.Head.CanCollide = false v.Character.Head.Massless = true end) end end end end)
+end)
 
 
 
