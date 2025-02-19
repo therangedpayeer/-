@@ -90,18 +90,56 @@ end
 end)
 
 tab5.newButton("types rude things", "toxic chat 1", function()
-
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("wow you suck like fr your trash")
 end)
 
 
 tab5.newButton("types rude things", "toxic chat 2", function()
-
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("LOLL YOUR HORRIBLE JUST UNSTALL")
 end)
 
 
+
+
+tab5.newButton("bypassed chat", "FUCK", function()
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("<>F<>U<>C<>K<>")
+end)
+
+
+
+tab5.newButton("bypassed chat", "FUCK YOU", function()
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("<>F<>U<>C<>K<> <>Y<>O<>U<>")
+end)
+
+
+tab5.newButton("bypassed chat", "BITCH", function()
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("<>B<>I<>T<>C<>H")
+end)
+
+
+tab5.newButton("bypassed chat", "FAGGOT", function()
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("<>F<>A<>G<>G<>O<>T")
+end)
+
+
+
+tab5.newButton("bypassed chat", "wanna suck it?", function()
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("<>wa<>nn<>a<>suck<>my<>d<>i<>c<>k<>?")
+end)
+
+
+tab5.newButton("bypassed chat", "sybau", function()
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("<>shut<>your<>b<>i<>t<>c<>h<>a<>s<>s<><up>")
+end)
+
+
+tab5.newButton("bypassed chat", "hah fat fucking loser", function()
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("<>haha<>fat<>F<>U<>C<>K<>I<>N<>G__loser")
+end)
+
 ---menu color!
 
-
+-- ALL ROBLOX GAMES
 
 
 
@@ -117,7 +155,7 @@ end)
 
 
 
-tab5.newDropdown("added features?", "things that were added!", {"updates tab!", "cframe fly[BYPASSED]", "more presets/hitbox extenders", "CS body color/effect", "death respawn", "multiple aimbot configs"}, function(selectedOption)
+tab5.newDropdown("added features?", "things that were added!", {"updates tab!", "cframe fly[BYPASSED]", "more presets/hitbox extenders", "CS body color/effect", "death respawn", "chat bypasser!"}, function(selectedOption)
     print(selectedOption)
 end)
 
