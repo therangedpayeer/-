@@ -42,7 +42,10 @@
 
 game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("checking if t-shirt is bought..")
 Wait(5)
-game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("thanks for buying!")
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("T-shirt Not Found.")
+wait(2)
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("ROBLOX HWID WHITELISTED")
+--game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("thanks for buying!")
 game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync(" @imjustsigma_real _____________<Y<O>U<T>U<B<E>!_____________exucted[SIGMA YURI PAID]")
 
 
@@ -137,6 +140,16 @@ tab5.newButton("bypassed chat", "hah fat fucking loser", function()
 game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("<>haha<>fat<>F<>U<>C<>K<>I<>N<>G__loser")
 end)
 
+
+tab5.newButton("bypassed chat", "N", function()
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("<>n<>i<>g<>g<>a")
+end)
+
+
+tab5.newButton("bypassed chat", "NR", function()
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("<>n<>i<>g<>g<>e<>r")
+end)
+
 ---menu color!
 
 -- ALL ROBLOX GAMES
@@ -155,7 +168,7 @@ end)
 
 
 
-tab5.newDropdown("added features?", "things that were added!", {"updates tab!", "cframe fly[BYPASSED]", "more presets/hitbox extenders", "CS body color/effect", "death respawn", "chat bypasser!"}, function(selectedOption)
+tab5.newDropdown("added features?", "things that were added!", {"updates tab!", "cframe fly[BYPASSED]", "more presets/hitbox extenders", "CS body color/effect", "death respawn", "multiple aimbot configs"}, function(selectedOption)
     print(selectedOption)
 end)
 
