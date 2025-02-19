@@ -168,7 +168,7 @@ end)
 
 
 
-tab5.newDropdown("added features?", "things that were added!", {"updates tab!", "cframe fly[BYPASSED]", "more presets/hitbox extenders", "CS body color/effect", "death respawn", "multiple aimbot configs"}, function(selectedOption)
+tab5.newDropdown("added features?", "things that were added!", {"updates tab!", "cframe fly[BYPASSED]", "more presets/hitbox extenders", "CS body color/effect", "death respawn", "CHAT BYPASSER!!"}, function(selectedOption)
     print(selectedOption)
 end)
 
@@ -1162,9 +1162,9 @@ getgenv().Loaded = true
 
 local fov = Drawing.new("Sqaure")
 fov.Filled = false
-fov.Transparency = 0.7
+fov.Transparency = 1
 fov.Thickness = 1
-fov.Color = Color3.fromRGB(130, 230, 198)
+fov.Color = Color3.fromRGB(250, 230, 18)
 fov.NumSides = 3
 
 --// Functions
