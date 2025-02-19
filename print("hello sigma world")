@@ -38,60 +38,23 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 --this message is not in the script yet but for beta testers LOL
 
-game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("checking if t-shirt is bought.")
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("checking if t-shirt is bought..")
 Wait(5)
 game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("thanks for buying!")
-game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("@imjustsigma_real / SIGMA YURI")
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync(" @imjustsigma_real _____________<Y<O>U<T>U<B<E>!_____________exucted[SIGMA YURI PAID]")
 
 
 print("thank you for buying [SIGMA YURI]!")
 print("all updates will be in logs tab!")
+----------------------------------------------------------
+
+
 
 local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
+-------------------
+--yes
 -------------
 local window = DrRayLibrary:Load("SIGMA YURI PAID!", "Default")
 --------------
@@ -102,7 +65,78 @@ local tab2 = DrRayLibrary.newTab("aimbot", "ImageIdHere")
 local tab3 = DrRayLibrary.newTab("viusals", "ImageIdHere")
 --------------
 local tab4 = DrRayLibrary.newTab("presets", "ImageIdHere")
+--------------
+local tab5 = DrRayLibrary.newTab("LOGS/UPDATES", "ImageIdHere")
+
+
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+tab5.newButton("chat clear!", "types _  alot[bypassed]", function()
+for i = 1, 2 do
+    game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("now clearing chat..                _                     _                                                _                     (x)  ")
+    game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("now clearing chat..                _                     _                                                _                     &  ")
+    game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("now clearing chat..                _                     _                                                _                     @c  ")
+    game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("now clearing chat..                _                     _                                                _                     #$  ")
+end
+
+end)
+
+tab5.newButton("type my cheat and channel!", "promote me!", function()
+for i = 1,1 do
+    game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("  struggling to win? its the big 2025__ try sigma yuri {free and paid version}")
+    game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync(" struggling to win? its the big 2025__ try sigma yuri {free and paid version}")
+ game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync(" <>Y<>O<>U<>T<>U<>B<>E @imjustsigma_real")
+end
+
+end)
+
+tab5.newButton("types rude things", "toxic chat 1", function()
+
+end)
+
+
+tab5.newButton("types rude things", "toxic chat 2", function()
+
+end)
+
+
+---menu color!
+
+
+
+
+
+
+--any updates added thing sor removed
+
+-------------
+
+tab5.newDropdown("view updates?", "features that were fixed/updated", {"", "FIXED AIMBOT NOT WORKING", "velocity speed update", "fixed skeleton esp[would not show new players]", "", "", "", ""}, function(selectedOption)
+    print(selectedOption)
+end)
+
+
+
+
+tab5.newDropdown("added features?", "things that were added!", {"updates tab!", "cframe fly[BYPASSED]", "more presets/hitbox extenders", "CS body color/effect", "death respawn", "multiple aimbot configs"}, function(selectedOption)
+    print(selectedOption)
+end)
+
+
+
+
+tab5.newDropdown("removed features?", "things that were removed!", {"esp menu", "fly", " ", "  ", "  ", "  ", "  ", "  "}, function(selectedOption)
+    print(selectedOption)
+end)
+
+
+
+
+
+
+
+
+------cheats sections starts below!
+
 tab1.newButton("velocity speed", "toggle is Z", function()
    local speedhack = false
 
@@ -189,7 +223,208 @@ end)
 -------------------------------
 -------------------------------
 -------------------------------
--------------------------------
+tab2.newButton("hood customs", "prediction 0.03[q][uppertorso]{INVISCIRCLE}", function()
+getgenv().Prediction = 0.03
+getgenv().AimPart = "UpperTorso"
+getgenv().Key = "C"
+getgenv().DisableKey = "P"
+
+getgenv().FOV = true
+getgenv().ShowFOV = true
+getgenv().FOVSize = 50
+
+--// Variables (Service)
+
+local Players = game:GetService("Players")
+local RS = game:GetService("RunService")
+local WS = game:GetService("Workspace")
+local GS = game:GetService("GuiService")
+local SG = game:GetService("StarterGui")
+
+--// Variables (regular)
+
+local LP = Players.LocalPlayer
+local Mouse = LP:GetMouse()
+local Camera = WS.CurrentCamera
+local GetGuiInset = GS.GetGuiInset
+
+local AimlockState = true
+local Locked
+local Victim
+
+local SelectedKey = getgenv().Key
+local SelectedDisableKey = getgenv().DisableKey
+
+--// Notification function
+
+function Notify(tx)
+    SG:SetCore("SendNotification", {
+        Title = "Enabled ✔ | SIGMA YURI[PAID]",
+        Text = tx,
+        Duration = 2
+    })
+end
+
+--// Check if aimlock is loaded
+
+if getgenv().Loaded == true then
+    Notify("Aimlock is already loaded!")
+    return
+end
+
+getgenv().Loaded = true
+
+--// FOV Circle
+
+local fov = Drawing.new("Circle")
+fov.Filled = false
+fov.Transparency = 0
+fov.Thickness = 1
+fov.Color = Color3.fromRGB(22, 225, 139)
+fov.NumSides = 3
+
+--// Functions
+
+function update()
+    if getgenv().FOV == true then
+        if fov then
+            fov.Radius = getgenv().FOVSize * 2
+            fov.Visible = getgenv().ShowFOV
+            fov.Position = Vector2.new(Mouse.X, Mouse.Y + GetGuiInset(GS).Y)
+
+            return fov
+        end
+    end
+end
+
+function WTVP(arg)
+    return Camera:WorldToViewportPoint(arg)
+end
+
+function WTSP(arg)
+    return Camera.WorldToScreenPoint(Camera, arg)
+end
+
+function getClosest()
+    local closestPlayer
+    local shortestDistance = math.huge
+
+    for i, v in pairs(game.Players:GetPlayers()) do
+        local notKO = v.Character:WaitForChild("BodyEffects")["K.O"].Value ~= true
+        local notGrabbed = v.Character:FindFirstChild("GRABBING_COINSTRAINT") == nil
+        
+        if v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("Humanoid") and v.Character.Humanoid.Health ~= 0 and v.Character:FindFirstChild(getgenv().AimPart) and notKO and notGrabbed then
+            local pos = Camera:WorldToViewportPoint(v.Character.PrimaryPart.Position)
+            local magnitude = (Vector2.new(pos.X, pos.Y) - Vector2.new(Mouse.X, Mouse.Y)).magnitude
+            
+            if (getgenv().FOV) then
+                if (fov.Radius > magnitude and magnitude < shortestDistance) then
+                    closestPlayer = v
+                    shortestDistance = magnitude
+                end
+            else
+                if (magnitude < shortestDistance) then
+                    closestPlayer = v
+                    shortestDistance = magnitude
+                end
+            end
+        end
+    end
+    return closestPlayer
+end
+ 
+--// Checks if key is down
+
+Mouse.KeyDown:Connect(function(k)
+    SelectedKey = SelectedKey:lower()
+    SelectedDisableKey = SelectedDisableKey:lower()
+    if k == SelectedKey then
+        if AimlockState == true then
+            Locked = not Locked
+            if Locked then
+                Victim = getClosest()
+
+                Notify("Locked onto: "..tostring(Victim.Character.Humanoid.DisplayName))
+            else
+                if Victim ~= nil then
+                    Victim = nil
+
+                    Notify("Unlocked!")
+                end
+            end
+        else
+            Notify("Aimlock is not enabled!")
+        end
+    end
+    if k == SelectedDisableKey then
+        AimlockState = not AimlockState
+    end
+end)
+
+--// Loop update FOV and loop camera lock onto target
+
+RS.RenderStepped:Connect(function()
+    update()
+    if AimlockState == true then
+        if Victim ~= nil then
+            Camera.CFrame = CFrame.new(Camera.CFrame.p, Victim.Character[getgenv().AimPart].Position + Victim.Character[getgenv().AimPart].Velocity*getgenv().Prediction)
+        end
+    end
+end)
+	while wait() do
+        if getgenv().AutoPrediction == true then
+        local pingvalue = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()
+        local split = string.split(pingvalue,'(')
+        local ping = tonumber(split[1])
+            if ping < 252325 then
+            getgenv().Prediction = 1.4
+        elseif ping < 2199999995 then
+            getgenv().Prediction = 1.2
+	    elseif ping < 29999905 then
+            getgenv().Prediction = 1.0
+	    elseif ping < 1999990 then
+            getgenv().Prediction = 0.10
+        elseif ping < 18999990 then
+            getgenv().Prediction = 0.12
+	    elseif ping < 199999970 then
+            getgenv().Prediction = 0.15
+	    elseif ping < 19999960 then
+            getgenv().Prediction = 0.18
+	    elseif ping < 1999950 then
+            getgenv().Prediction = 0.110
+        elseif ping < 19999940 then
+            getgenv().Prediction = 0.113
+        elseif ping < 19999999930 then
+            getgenv().Prediction = 0.116
+        elseif ping < 999999120 then
+            getgenv().Prediction = 0.120
+        elseif ping < 999999110 then
+            getgenv().Prediction = 0.124
+        elseif ping < 199999905 then
+            getgenv().Prediction = 0.127
+        elseif ping < 99999990 then
+            getgenv().Prediction = 0.130
+        elseif ping < 999999980 then
+            getgenv().Prediction = 0.133
+        elseif ping < 799999990 then
+            getgenv().Prediction = 0.136
+        elseif ping < 99999960 then
+            getgenv().Prediction = 0.15038
+        elseif ping < 59999990 then
+            getgenv().Prediction = 0.15038
+        elseif ping < 99999940 then
+            getgenv().Prediction = 0.145
+        elseif ping < 3999990 then
+            getgenv().Prediction = 0.155
+        elseif ping < 29999990 then
+            getgenv().Prediction = 0.157
+        end
+        end
+	end 
+end)
+
+
+------------------------------
 -------------------------------
 --------------------------------------------------------------
 -------------------------------
@@ -265,7 +500,7 @@ local fov = Drawing.new("Circle")
 fov.Filled = false
 fov.Transparency = 1
 fov.Thickness = 1
-fov.Color = Color3.fromRGB(2, 5, 139)
+fov.Color = Color3.fromRGB(22, 225, 139)
 fov.NumSides = 3
 
 --// Functions
@@ -471,7 +706,7 @@ local fov = Drawing.new("Circle")
 fov.Filled = false
 fov.Transparency = 0.6
 fov.Thickness = 1
-fov.Color = Color3.fromRGB(0, 0, 139)
+fov.Color = Color3.fromRGB(54, 40, 139)
 fov.NumSides = 3
 
 --// Functions
@@ -675,7 +910,7 @@ local fov = Drawing.new("Sqaure")
 fov.Filled = false
 fov.Transparency = 1
 fov.Thickness = 1
-fov.Color = Color3.fromRGB(2, 35, 197)
+fov.Color = Color3.fromRGB(121, 235, 197)
 fov.NumSides = 3
 
 --// Functions
@@ -878,7 +1113,7 @@ local fov = Drawing.new("Sqaure")
 fov.Filled = false
 fov.Transparency = 0.7
 fov.Thickness = 1
-fov.Color = Color3.fromRGB(30, 30, 100)
+fov.Color = Color3.fromRGB(130, 230, 198)
 fov.NumSides = 3
 
 --// Functions
@@ -1080,7 +1315,7 @@ local fov = Drawing.new("Sqaure")
 fov.Filled = false
 fov.Transparency = 1
 fov.Thickness = 1
-fov.Color = Color3.fromRGB(25, 135, 76)
+fov.Color = Color3.fromRGB(245, 135, 76)
 fov.NumSides = 3
 
 --// Functions
@@ -1283,7 +1518,7 @@ local fov = Drawing.new("Sqaure")
 fov.Filled = false
 fov.Transparency = 1
 fov.Thickness = 1
-fov.Color = Color3.fromRGB(255, 75, 255)
+fov.Color = Color3.fromRGB(255, 175, 255)
 fov.NumSides = 3
 
 --// Functions
@@ -1485,7 +1720,7 @@ local fov = Drawing.new("Sqaure")
 fov.Filled = false
 fov.Transparency = 1
 fov.Thickness = 1
-fov.Color = Color3.fromRGB(255, 5, 100)
+fov.Color = Color3.fromRGB(255, 55, 100)
 fov.NumSides = 3
 
 --// Functions
@@ -1886,7 +2121,7 @@ local fov = Drawing.new("Sqaure")
 fov.Filled = false
 fov.Transparency = 1
 fov.Thickness = 1
-fov.Color = Color3.fromRGB(255, 5, 100)
+fov.Color = Color3.fromRGB(255, 105, 100)
 fov.NumSides = 3
 
 --// Functions
