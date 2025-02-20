@@ -43,9 +43,9 @@
 game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("checking if t-shirt is bought..")
 Wait(5)
 game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("T-shirt Not Found.")
-wait(2)
-game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("ROBLOX HWID WHITELISTED")
---game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("thanks for buying!")
+wait(0.4)
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("USERID WHITELISTED")
+--game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("CURRENT [BETA TESTER]")
 game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync(" @imjustsigma_real _____________<Y<O>U<T>U<B<E>!_____________exucted[SIGMA YURI PAID]")
 
 
@@ -73,13 +73,54 @@ local tab5 = DrRayLibrary.newTab("LOGS/UPDATES", "ImageIdHere")
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+---roblox 
+tab5.newButton("CHAT CLEAR V2!", "extremely over.powered[bypassed]", function()
+
+
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("▬▬ι════════ﺤ")
+wait(0.4)
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("<>CHAT-CLEARING<>")
+wait(0.7)
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("🌌🌌🌌")
+wait(2.3)
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("______________\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r❕❕❕❕❕")
+end)
+
+
+
+
+
+
+
+
+
+
+
+
+
 tab5.newButton("chat clear!", "types _  alot[bypassed]", function()
-for i = 1, 2 do
-    game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("now clearing chat..                _                     _                                                _                     (x)  ")
-    game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("now clearing chat..                _                     _                                                _                     &  ")
-    game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("now clearing chat..                _                     _                                                _                     @c  ")
-    game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("now clearing chat..                _                     _                                                _                     #$  ")
-end
+    game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("▬▬ι════════ﺤ")
+ 
+ 
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("SIGMA YURI PAID[chatclear]")
+ wait(0.3)
+ game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("🌌🌌🌌🌌🌌🌌🌌🌌🌌🌌🌌🌌")
+ wait(2.5)
+ ---------------------
+	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("now clearing chat..❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕")
+    wait(0.00000000)
+	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("now clearing chat..❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕")
+    wait(0.00000000)
+	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("now clearing chat..❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕")
+    wait(0.00000000)
+	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("now clearing chat..❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕")
+    wait(0.00000000)
+	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("now clearing chat..❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕")
+    wait(0.00000000)
+	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("now clearing chat..❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕")
+wait ("0.9")
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("chat cleared!")
 
 end)
 
