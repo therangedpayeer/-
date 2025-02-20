@@ -100,6 +100,33 @@ local tab4 = DrRayLibrary.newTab("presets", "ImageIdHere")
 local tab5 = DrRayLibrary.newTab("LOGS/UPDATES", "ImageIdHere")
 
 
+---------------------------
+-------------
+tab5.newButton("rejoin", "rejoins current game", function()
+game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
+end)
+--------------------------------------------------------------------------------
+tab5.newButton("server hop", "joins differant server", function()
+
+end)
+
+
+
+tab5.newButton("fastest leave script", "instantly leaves response-time[-1.7]", function()
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+
+-- Function to rejoin the game
+local function rejoinGame()
+    game:Shutdown() -- This shuts down the current session
+    wait(0.0000000000001) -- Wait for 3 seconds before rejoining
+    game:GetService("TeleportService"):Teleport(game.PlaceId, player)
+end
+
+-- 
+wait(0.000000001) -- 
+rejoinGame()
+end)
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ---roblox 
@@ -110,15 +137,34 @@ game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("▬▬ι�
 wait(0.4)
 game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("<>CHAT-CLEARING<>")
 wait(1)
-game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("🌌🌌🌌")
-wait(2.3)
-game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("______________\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r❕❕❕❕❕")
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("🌌_🌌")
+wait(1.8)
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("__________\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r❕❕❕❕❕")
 end)
 
+tab5.newButton("perm chat breaker", "are you sure?[100%noban]", function()
+---
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync(".perm chat breaker")
+
+
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("SIGMA YURI[PAID] says are you sure you want to continue?")
+wait(0.4)
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("y/n?")
+wait(4.2)
+----------
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("yes")
+wait(0.6)
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("SIGMA YURI [PAID] says breaking chat in 3 seconds")
+wait(4)
 
 
 
+while true do
+    game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("__________\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r❕")
+    wait(3)  -- Adjust the delay in seconds
+end
 
+end)
 
 
 
@@ -154,7 +200,7 @@ end)
 
 tab5.newButton("type my cheat and channel!", "promote me!", function()
 for i = 1,1 do
-    game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("  struggling to win? its the big 2025__ try sigma yuri {free and paid version}")
+    game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("PAID 40 CENTS")
     game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync(" struggling to win? its the big 2025__ try sigma yuri {free and paid version}")
  game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync(" <>Y<>O<>U<>T<>U<>B<>E @imjustsigma_real")
 end
@@ -173,49 +219,49 @@ end)
 
 
 
-tab5.newButton("bypassed chat", "FUCK", function()
+tab5.newButton("bypassed chat", "FUCK-98%noban", function()
 game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("<>F<>U<>C<>K<>")
 end)
 
 
 
-tab5.newButton("bypassed chat", "FUCK YOU", function()
+tab5.newButton("bypassed chat", "FUCK YOU-98%noban", function()
 game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("<>F<>U<>C<>K<> <>Y<>O<>U<>")
 end)
 
 
-tab5.newButton("bypassed chat", "BITCH", function()
+tab5.newButton("bypassed chat", "BITCH-98%noban", function()
 game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("<>B<>I<>T<>C<>H")
 end)
 
 
-tab5.newButton("bypassed chat", "FAGGOT", function()
+tab5.newButton("bypassed chat", "FAGGOT-98%noban", function()
 game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("<>F<>A<>G<>G<>O<>T")
 end)
 
 
 
-tab5.newButton("bypassed chat", "wanna suck it?", function()
+tab5.newButton("bypassed chat", "wanna suck it?-98%noban", function()
 game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("<>wa<>nn<>a<>suck<>my<>d<>i<>c<>k<>?")
 end)
 
 
-tab5.newButton("bypassed chat", "sybau", function()
+tab5.newButton("bypassed chat", "sybau-98%noban", function()
 game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("<>shut<>your<>b<>i<>t<>c<>h<>a<>s<>s<><up>")
 end)
 
 
-tab5.newButton("bypassed chat", "hah fat fucking loser", function()
+tab5.newButton("bypassed chat", "hah fat fucking loser-100%noban", function()
 game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("<>haha<>fat<>F<>U<>C<>K<>I<>N<>G__loser")
 end)
 
 
-tab5.newButton("bypassed chat", "N", function()
+tab5.newButton("bypassed chat", "N-100%noban", function()
 game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("<>n<>i<>g<>g<>a")
 end)
 
 
-tab5.newButton("bypassed chat", "NR", function()
+tab5.newButton("bypassed chat", "NR-72%noban", function()
 game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("<>n<>i<>g<>g<>e<>r")
 end)
 
@@ -230,7 +276,7 @@ end)
 
 -------------
 
-tab5.newDropdown("view updates?", "features that were fixed/updated", {"", "FIXED AIMBOT NOT WORKING", "velocity speed update", "fixed skeleton esp[would not show new players]", "added 2 different chat clear options", "", "", ""}, function(selectedOption)
+tab5.newDropdown("view updates?", "features that were fixed/updated", {"", "FIXED AIMBOT NOT WORKING", "added server related scripts!", "fixed skeleton esp[would not show new players]", "added 2 different chat clear options", "", "", ""}, function(selectedOption)
     print(selectedOption)
 end)
 
