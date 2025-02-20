@@ -40,13 +40,13 @@
 
 --this message is not in the script yet but for beta testers LOL
 
-game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("checking if t-shirt is bought..")
-Wait(5)
-game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("T-shirt Not Found.")
-wait(0.4)
-game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("USERID WHITELISTED")
+--game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("checking if t-shirt is bought..")
+--Wait(5)
+--game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("T-shirt Not Found.")
+---wait(0.4)
+--game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("USERID WHITELISTED")
 --game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("CURRENT [BETA TESTER]")
-game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync(" @imjustsigma_real _____________<Y<O>U<T>U<B<E>!_____________exucted[SIGMA YURI PAID]")
+--game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync(" @imjustsigma_real _____________<Y<O>U<T>U<B<E>!_____________exucted[SIGMA YURI PAID]")
 
 
 print("thank you for buying [SIGMA YURI]!")
@@ -112,6 +112,10 @@ end)
 
 
 
+
+
+
+
 tab5.newButton("fastest leave script", "instantly leaves response-time[-1.7]", function()
 local Players = game:GetService("Players")
 local player = Players.LocalPlayer
@@ -129,17 +133,53 @@ rejoinGame()
 end)
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+
+-- ก็็็็็็็็็็็็็็็็็็็
+
+tab5.newButton("type?", "chat glitcher", function()
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("็.-------ก็็็็็็็็็็็็็็็็็็็  ็็")
+wait(0.5)
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("  ----- ก็็็็็็็็็็็็็็็็็็็")
+wait(0.5)
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("---ก็็็็็็็็็็็็็็็็็็็")
+wait(0.5)
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("----------ก็็็็็็็็็็็็็็็็็็็")
+wait(0.6)
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("  ------ก็็็็็็็็็็็็็็็็็็็")
+wait(0.4)
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync(".---ก็็็็็็็็็็็็็็็็็็็")
+wait(0.5)
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("  -------ก็็็็็็็็็็็็็็็็็็็")
+wait(0.3)
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync(" -- ก็็็็็็็็็็็็็็็็็็็")
+wait(0.3)
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("ก็็็็็็็็็็็็็็็็็็็")
+end)
+
+
+
+
+tab5.newButton("type?", "🗣⊂=====8", function()
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("🗣⊂=====8")
+end)
+
+---------------------------
+tab5.newButton("type?", "▬▬ι════════ﺤ", function()
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("▬▬ι════════ﺤ")
+end)
+
+---------------------------
 ---roblox 
 tab5.newButton("CHAT CLEAR V2!", "extremely over.powered[bypassed]", function()
 
 
 game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("▬▬ι════════ﺤ")
 wait(0.4)
-game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("<>CHAT-CLEARING<>")
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("SIGMA YURI[PAID]<>CHAT-CLEAR!<>V2")
 wait(1)
-game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("🌌_🌌")
-wait(1.8)
-game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("__________\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r❕❕❕❕❕")
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("🌌_🌌_🌌")
+wait(2.8)
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("_______\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r❕❕❕❕")
 end)
 
 tab5.newButton("perm chat breaker", "are you sure?[100%noban]", function()
@@ -161,7 +201,7 @@ wait(4)
 
 while true do
     game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("__________\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r❕")
-    wait(3)  -- Adjust the delay in seconds
+    wait(4.2)  -- Adjust the delay in seconds
 end
 
 end)
@@ -173,28 +213,33 @@ end)
 
 
 
-tab5.newButton("chat clear!", "types _  alot[bypassed]", function()
+tab5.newButton("CHAT NUKER!", "[bypassed]v2", function()
     game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("▬▬ι════════ﺤ")
  
  
-game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("SIGMA YURI PAID[chatclear]v2")
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("SIGMA YURI PAID[chat spammerV2]")
  wait(0.3)
  game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("🌌🌌🌌🌌🌌🌌🌌🌌🌌🌌🌌🌌")
  wait(2.5)
  ---------------------
-	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("now clearing chat..❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕")
-    wait(0.00000000)
-	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("now clearing chat..❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕")
-    wait(0.00000000)
-	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("now clearing chat..❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕")
-    wait(0.00000000)
-	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("now clearing chat..❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕")
-    wait(0.00000000)
-	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("now clearing chat..❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕")
-    wait(0.00000000)
-	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("now clearing chat..❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕")
+	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("CHAT NUKER..❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕--IBc4d")
+    wait(0.8)
+	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("CHAT NUKER..❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕--L6Qt")
+    wait(0.8)
+	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("CHAT NUKER..❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕--(x)LmU")
+    wait(0.8)
+	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("CHAT NUKER..❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕--KmVD4")
+    wait(0.8)
+	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("CHAT NUKER..❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕--7_cก็็")
+    wait(0.8)
+	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("CHAT NUKER..❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕-(=ก็็c]")
+ wait(0.8)
+	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("CHAT NUKER..❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕--ibก็็")
+    wait(0.2)
+	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("CHAT NUKER..❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕--!qt")
+
 wait ("0.9")
-game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("chat cleared!")
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("<>-chat nuked!-<> ")
 
 end)
 
@@ -577,10 +622,48 @@ while wait() do
     if speedhack == true then
      game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 100
     end
+     
+end
+
+end)
+---------------------------------------------------
+
+
+tab1.newButton("velocity speed[slow]", "toggle is G", function()
+   local speedhack = false
+
+function onKeyPress(inputObject, gameProcessedEvent)
+    if inputObject.KeyCode == Enum.KeyCode.G and gameProcessedEvent == false then
+     if speedhack == false then
+       speedhack = true
+
+     elseif speedhack == true then
+       speedhack = false
+    
+       
+     end
+   end
+end
+ 
+game:GetService("UserInputService").InputBegan:connect(onKeyPress)
+
+
+while wait() do
+    if speedhack == true then
+     game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 46.7
+    end
     
 end
 
 end)
+
+
+
+
+
+
+
+
 -------------------------------
 -------------------------------
 tab1.newButton("Spinbot", "makes your character spin in a werid way", function()
@@ -650,7 +733,7 @@ getgenv().Key = "C"
 getgenv().DisableKey = "P"
 
 getgenv().FOV = true
-getgenv().ShowFOV = true
+getgenv().ShowFOV = false
 getgenv().FOVSize = 50
 
 --// Variables (Service)
@@ -2988,7 +3071,17 @@ end)
 
 
 
+----------------AUTO FARM
+tab5.newButton("type?", "▬▬ι════════ﺤ", function()
+_G.AutofarmSettings = { 
+    Fps = 5, --// anything above 3 should be good, 10+ if you want to make the most cash.
+    Saver = true, --// black screen to save usage, shows wallet, timer, broken atms, profit.
+}
 
+while true do
+    loadstring(game:HttpGet("https://pastebin.com/raw/Lr8HQU96"))()
+    wait(7 * 60) -- Wait for 7 minutes before running the script again
+end
 
-
+end)
 ----------------------
