@@ -245,7 +245,7 @@ end)
 
 tab5.newButton("type my cheat and channel!", "promote me!", function()
 for i = 1,1 do
-    game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("PAID 40 CENTS")
+    game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("PAID 1$")
     game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync(" struggling to win? its the big 2025__ try sigma yuri {free and paid version}")
  game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync(" <>Y<>O<>U<>T<>U<>B<>E @imjustsigma_real")
 end
@@ -328,7 +328,7 @@ end)
 
 
 
-tab5.newDropdown("added features?", "things that were added!", {"updates tab!", "cframe fly[BYPASSED]", "more presets/hitbox extenders", "CS body color/effect", "death respawn", "CHAT BYPASSER!!"}, function(selectedOption)
+tab5.newDropdown("added features?", "things that were added!", {"updates tab!", "cframe fly[BYPASSED]", "more presets/hitbox extenders", "autofarm + visual body effects", "death respawn", "CHAT BYPASSER!!"}, function(selectedOption)
     print(selectedOption)
 end)
 
