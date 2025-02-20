@@ -53,7 +53,35 @@ print("thank you for buying [SIGMA YURI]!")
 print("all updates will be in logs tab!")
 ----------------------------------------------------------
 
+-- Create a ScreenGui to hold the message
+local player = game.Players.LocalPlayer
+local screenGui = Instance.new("ScreenGui")
+screenGui.Parent = player:WaitForChild("PlayerGui")
 
+-- Create the text label
+local loadingLabel = Instance.new("TextLabel")
+loadingLabel.Size = UDim2.new(0, 400, 0, 50)
+loadingLabel.Position = UDim2.new(0.48, -150, 0.5, -25)  -- Center the label
+loadingLabel.Text = "The script is loading Please wait, it has a lot of code!"
+loadingLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+loadingLabel.BackgroundTransparency = 0.4
+loadingLabel.TextScaled = true
+loadingLabel.Parent = screenGui
+
+-- Optional: Add a fade-out effect after a delay
+local function fadeOut()
+    -- Start fading out by changing the text transparency over time
+    for i = 0, 1, 0.05 do
+        loadingLabel.TextTransparency = i
+        wait(0.1)
+    end
+    screenGui:Destroy()  -- Remove the ScreenGui after the fade
+end
+
+-- Call fadeOut after 5 seconds (you can adjust the time)
+wait(5)  -- Time before fading out
+fadeOut()
+--------------------------------------------------------------------------------------
 
 local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
 -------------------
@@ -81,7 +109,7 @@ tab5.newButton("CHAT CLEAR V2!", "extremely over.powered[bypassed]", function()
 game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("▬▬ι════════ﺤ")
 wait(0.4)
 game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("<>CHAT-CLEARING<>")
-wait(0.7)
+wait(1)
 game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("🌌🌌🌌")
 wait(2.3)
 game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("______________\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r❕❕❕❕❕")
@@ -103,7 +131,7 @@ tab5.newButton("chat clear!", "types _  alot[bypassed]", function()
     game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("▬▬ι════════ﺤ")
  
  
-game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("SIGMA YURI PAID[chatclear]")
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("SIGMA YURI PAID[chatclear]v2")
  wait(0.3)
  game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("🌌🌌🌌🌌🌌🌌🌌🌌🌌🌌🌌🌌")
  wait(2.5)
@@ -202,7 +230,7 @@ end)
 
 -------------
 
-tab5.newDropdown("view updates?", "features that were fixed/updated", {"", "FIXED AIMBOT NOT WORKING", "velocity speed update", "fixed skeleton esp[would not show new players]", "", "", "", ""}, function(selectedOption)
+tab5.newDropdown("view updates?", "features that were fixed/updated", {"", "FIXED AIMBOT NOT WORKING", "velocity speed update", "fixed skeleton esp[would not show new players]", "added 2 different chat clear options", "", "", ""}, function(selectedOption)
     print(selectedOption)
 end)
 
