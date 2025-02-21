@@ -40,14 +40,13 @@
 
 --this message is not in the script yet but for beta testers LOL
 
-game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("checking if t-shirt is bought..")
-Wait(5)
-game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("T-shirt Not Found.")
-wait(0.4)
-game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("USERID WHITELISTED")
-wait(0.8)
-game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("CURRENT [BETA TESTER]")
-game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync(" @imjustsigma_real _____________<Y<O>U<T>U<B<E>!_____________exucted[SIGMA YURI PAID]")
+--game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("checking if t-shirt is bought..")
+--Wait(5)
+--game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("T-shirt Not Found.")
+---wait(0.4)
+--game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("USERID WHITELISTED")
+--game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("CURRENT [BETA TESTER]")
+--game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync(" @imjustsigma_real _____________<Y<O>U<T>U<B<E>!_____________exucted[SIGMA YURI PAID]")
 
 
 print("thank you for buying [SIGMA YURI]!")
@@ -4172,28 +4171,28 @@ _G.AutofarmSettings = {
 loadstring(game:HttpGet("https://pastebin.com/raw/Lr8HQU96"))()
 end)
 ----------------------
-tab5.newButton("ESP", "box+health bar", function()
+tab3.newButton("ESP", "tracers+box+health bar", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Blissful4992/ESPs/refs/heads/main/2D%20Box%20ESP/ESP%20%2B%20Health%20Bars.lua"))()
 end)
 
 
 
-tab5.newButton("ESP", "green box", function()
+tab3.newButton("ESP", "green box", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Blissful4992/ESPs/refs/heads/main/2D%20Box%20ESP/ESP.lua"))()
 end)
 
 
-tab5.newButton("ESP", "red box", function()
+tab3.newButton("ESP", "red box", function()
 loadstring(game:HttpGet("https://pastebin.com/raw/uHV8a9Cd"))()
 end)
 
-tab5.newButton("ESP", "black box", function()
-loadstring(game:HttpGet("https://pastebin.com/raw/J8JqCsn3"))()
+tab3.newButton("ESP", "black box", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Blissful4992/ESPs/refs/heads/main/2D%20Box%20ESP/ESP.lua"))()
 end)
 
 
 
-tab5.newButton("ESP", "roblox health bar+names", function()
+tab3.newButton("ESP", "roblox health bar", function()
 --healthbar esp
 
 local function ApplyESP(v)
