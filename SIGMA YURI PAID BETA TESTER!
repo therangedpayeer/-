@@ -1,4 +1,4 @@
-
+--
 
 ---hello sigma yuri paid beta tester!
 
@@ -268,7 +268,7 @@ end)
 
 
 tab5.newButton("bypassed chat", "stfu-100%noban", function()
-game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("shut the <F<+>U<=>C<+<K> up")
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("shut the <F<+>U<->C<+<K> up")
 end)
 
 tab5.newButton("bypassed chat", "SHIT-100%noban", function()
@@ -600,7 +600,7 @@ end)
 tab1.newButton("autostomp", "loop stomps", function()
 local RunService = game:GetService("RunService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local RATE_PER_SECOND = 0.4
+local RATE_PER_SECOND = 9999999
 
 RunService.Stepped:Connect(function(time, step)
 	ReplicatedStorage.MainEvent:FireServer("Stomp")
@@ -746,40 +746,8 @@ end)
 -------------------------------
 
 
-tab1.newButton("Spinbot", "makes your character spin in a werid way[upsidedown]", function()
-   game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync(".upsided")
-   
-   
-    -- SIGMA YURI PAID YAYYAYYAYAY
- 
-power = 150 -- change this to make it more or less powerful
- 
-game:GetService('RunService').Stepped:connect(function()
-game.Players.LocalPlayer.Character.Head.CanCollide = false
-game.Players.LocalPlayer.Character.UpperTorso.CanCollide = false
-game.Players.LocalPlayer.Character.LowerTorso.CanCollide = false
-game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
-end)
-wait(.1)
-local bambam = Instance.new("BodyThrust")
-bambam.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
-bambam.Force = Vector3.new(power,0,power)
-bambam.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
-end)
--------------------------------
-tab1.newButton("death postion spawn", "respawn you where you died", function()
-function log() deadpos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame end
+-------------------------
 
-game.Players.LocalPlayer.Character.Humanoid.Died:Connect(log)
-
-game.Players.LocalPlayer.CharacterAdded:Connect(function(char)
-
-char:WaitForChild("Humanoid", 3).Died:Connect(log)
-
-char:WaitForChild("HumanoidRootPart",3).CFrame = deadpos
-    
-end)
-end)
 
 
 
@@ -1682,7 +1650,7 @@ getgenv().NemesisPreBeta = {
 end)
 ------------------------
 ---------------------
-tab2.newButton("universal_best-configs", "[reccomened]prediction 0.03[Q]", function()
+tab2.newButton("universal_best-configs", "[reccomened][Q]", function()
 getgenv().NemesisPreBeta = {
 		["Settings"] = {
 			Disabling = {Toggle = false, Keybind = "H"},
