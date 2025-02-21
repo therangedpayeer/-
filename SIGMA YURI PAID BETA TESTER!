@@ -45,7 +45,7 @@ Wait(5)
 game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("T-shirt Not Found.")
 wait(0.4)
 game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("USERID WHITELISTED")
-wait0(0.7)
+wait(0.7)
 game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("CURRENT [BETA TESTER]")
 game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync(" @imjustsigma_real _____________<Y<O>U<T>U<B<E>!_____________exucted[SIGMA YURI PAID]")
 
