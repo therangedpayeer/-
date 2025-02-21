@@ -42,7 +42,7 @@
 
 game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("checking if t-shirt is bought..")
 Wait(5)
-game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("T-shirt Not Found.")
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("T-shirt found!.")
 wait(0.4)
 game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("USERID WHITELISTED")
 wait(1.7)
@@ -600,16 +600,16 @@ end)
 tab1.newButton("autostomp", "loop stomps", function()
 local RunService = game:GetService("RunService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local RATE_PER_SECOND = 9999999
+local RATE_PER_SECOND = 1
 
 RunService.Stepped:Connect(function(time, step)
 	ReplicatedStorage.MainEvent:FireServer("Stomp")
 end)
 end)
 
-
-
-
+tab1.newButton("cframe fly", "[BYPASSED]{V}", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/dkAHwFWS"))()
+end)
 --------------------
 tab1.newButton("velocity speed", "toggle is Z", function()
    local speedhack = false
