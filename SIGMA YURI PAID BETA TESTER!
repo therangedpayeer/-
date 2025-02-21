@@ -42,7 +42,7 @@
 
 game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("checking if t-shirt is bought..")
 Wait(5)
-game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("T-shirt found!.")
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("T-shirt not found!.")
 wait(0.4)
 game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("USERID WHITELISTED")
 wait(1.7)
