@@ -40,13 +40,14 @@
 
 --this message is not in the script yet but for beta testers LOL
 
---game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("checking if t-shirt is bought..")
---Wait(5)
---game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("T-shirt Not Found.")
----wait(0.4)
---game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("USERID WHITELISTED")
---game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("CURRENT [BETA TESTER]")
---game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync(" @imjustsigma_real _____________<Y<O>U<T>U<B<E>!_____________exucted[SIGMA YURI PAID]")
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("checking if t-shirt is bought..")
+Wait(5)
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("T-shirt Not Found.")
+wait(0.4)
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("USERID WHITELISTED")
+wait0(0.7)
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("CURRENT [BETA TESTER]")
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync(" @imjustsigma_real _____________<Y<O>U<T>U<B<E>!_____________exucted[SIGMA YURI PAID]")
 
 
 print("thank you for buying [SIGMA YURI]!")
@@ -1718,7 +1719,7 @@ getgenv().NemesisPreBeta = {
 					Knocked = false, 
 					CrewID = false
 				},
-				BodyParts = {"HumanoidRootPart", "Head"}
+				BodyParts = {"Head", "Head"}
 			}
 		},
 		["Silent"] = {
