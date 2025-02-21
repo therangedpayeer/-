@@ -607,8 +607,8 @@ RunService.Stepped:Connect(function(time, step)
 end)
 end)
 
-tab1.newButton("cframe fly", "[BYPASSED]{V}", function()
-loadstring(game:HttpGet("https://pastebin.com/raw/dkAHwFWS"))()
+tab1.newButton("velocity speed", "toggle is Z", function()
+
 end)
 --------------------
 tab1.newButton("velocity speed", "toggle is Z", function()
