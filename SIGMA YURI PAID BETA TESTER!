@@ -42,7 +42,7 @@
 
 game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("checking if t-shirt is bought..")
 Wait(5)
-game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("T-shirt not found!.")
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("T-shirt  not found!.")
 wait(0.4)
 game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("USERID WHITELISTED")
 wait(1.7)
@@ -51,7 +51,19 @@ game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync(" @imjustsi
 
 
 print("thank you for buying [SIGMA YURI]!")
-print("all updates will be in logs tab!")
+print("some updates will be in logs tab!")
+print("all updates will be here!")
+print("------------------------------------------------------------")
+print("updates list 2/21/2025                                     │ ")
+print("removed spin-reason detected on da hood                    │")
+print("removed veolicty fly-reason instant ban on da hood         │")
+print("added new visual features-2                                │")
+print("DO NOT USE FLING ON ACTUAL DA HOOD IT WILL BAN YOU!        │")
+print("hours spent working on this 45+                            │")
+print("lines of code 4000+                                        │")
+print("i test every almost every feature on da hood               │")
+print("2/21/25 testing every feature on da hood before adding!    │")
+print("------------------------------------------------------------")
 ----------------------------------------------------------
 
 -- Create a ScreenGui to hold the message
@@ -107,7 +119,69 @@ tab5.newButton("rejoin", "rejoins current game", function()
 game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
 end)
 --------------------------------------------------------------------------------
-tab5.newButton("server hop", "joins differant server", function()
+tab3.newButton("VISUALS!", "if somebody takes damage they turn purple", function()
+-- Script placed in ServerScriptService
+local function makeNeonPurple(player)
+    -- Ensure the player has a character
+    local character = player.Character
+    if character and character:FindFirstChild("Humanoid") then
+        -- Get the player's character's humanoid
+        local humanoid = character:FindFirstChild("Humanoid")
+        
+        -- Change the character's color to neon purple
+        for _, part in ipairs(character:GetChildren()) do
+            if part:IsA("BasePart") then
+                part.Color = Color3.fromRGB(255, 255, 255) -- Neon purple color
+                part.Material = Enum.Material.SmoothPlastic -- Smooth, shiny look
+            end
+        end
+        
+        -- Reset back to normal color after 2 seconds
+        wait(2)
+        
+        -- Restore the original color
+        for _, part in ipairs(character:GetChildren()) do
+            if part:IsA("BasePart") then
+                part.Color = part.Parent:FindFirstChild("OriginalColor") or Color3.fromRGB(255, 255, 255) -- Default color (white)
+            end
+        end
+    end
+end
+
+-- Connect to the player taking damage
+game.Players.PlayerAdded:Connect(function(player)
+    player.CharacterAdded:Connect(function(character)
+        -- Track each part's original color
+        for _, part in ipairs(character:GetChildren()) do
+            if part:IsA("BasePart") then
+                local originalColor = Instance.new("ObjectValue")
+                originalColor.Name = "OriginalColor"
+                originalColor.Value = part.Color
+                originalColor.Parent = part
+            end
+        end
+
+        -- Listen for damage
+        local humanoid = character:WaitForChild("Humanoid")
+        humanoid.Died:Connect(function()
+            -- Restore color on death if needed
+            wait(1)  -- Delay to avoid any race conditions
+            for _, part in ipairs(character:GetChildren()) do
+                if part:IsA("BasePart") then
+                    part.Color = part.Parent:FindFirstChild("OriginalColor") or Color3.fromRGB(255, 255, 255)
+                end
+            end
+        end)
+
+        -- When the humanoid takes damage
+        humanoid.HealthChanged:Connect(function(health)
+            if health < humanoid.MaxHealth then
+                -- Player took damage, trigger color change
+                makeNeonPurple(player)
+            end
+        end)
+    end)
+end)
 
 end)
 
@@ -203,21 +277,21 @@ game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("SIGMA YURI
  game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("🌌🌌🌌🌌🌌🌌🌌🌌🌌🌌🌌🌌")
  wait(2.5)
  ---------------------
-	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("CHAT NUKER..❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕--IBc4d")
+	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("CHAT-NUKER..❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕--c4dก็็")
     wait(0.8)
-	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("CHAT NUKER..❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕--L6Qt")
+	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("CHAT-NUKER..❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕--Lก็็HU6Qt")
     wait(0.8)
-	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("CHAT NUKER..❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕--(x)LmU")
+	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("CHAT-NUKER..❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕--ก็็(v))Lm()U")
     wait(0.8)
-	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("CHAT NUKER..❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕--KmVD4")
+	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("CHAT-NUKER..❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕--Km)VD4")
     wait(0.8)
-	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("CHAT NUKER..❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕--7IUcก็็")
+	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("CHAT-NUKER..❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕--7IUcก็็")
     wait(0.8)
-	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("CHAT NUKER..❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕-(TXก็็c]")
+	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("CHAT-NUKER..❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕-(TXก็็c]")
  wait(0.8)
-	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("CHAT NUKER..❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕--iUbก็็")
+	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("CHAT-NUKER..❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕--i(.Ubก็็")
     wait(0.2)
-	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("CHAT NUKER..❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕--!qTxm")
+	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("CHAT-NUKER..❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕❕--!qก็็Txmก็็")
 
 wait ("0.9")
 game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("<>-CHAT NUKED!-<> ")
@@ -235,19 +309,19 @@ game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("SIGMA YURI
  ---------------------
 
 
-	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("𝄃                  L;'3'            -      4        -6        -     7            -    7  -             -")
+	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("𝄃          rVb        L;'3'            -      4        -6        -     7            -    7  -             -")
     wait(0.2)
-    game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("𝄃                XMV            -      4        -6        -     7            -    7  -             -")
+    game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("𝄃    y         g   XMV            -      4        -6        -     7            -    7  -             -")
     wait(0.2)
     game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("𝄃                 P9X            -      4        -6        -     7            -    7  -             -")
     wait(0.2)
-	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("𝄃                  iUTbd            -      4        -6        -     7            -    7  -             -")
+	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("𝄃     x             iUTbd            -      4        -6        -     7            -    7  -             -")
     wait(0.2)
-	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("𝄃                  L;'3'            -      4        -6        -     7            -    7  -             -")
+	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("𝄃      )     5       L;'3'            -      4        -6        -     7            -    7  -             -")
     wait(0.2)
-    game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("𝄃                  I7v            -      4        -6        -     7            -    7  -             -")
+    game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("𝄃    )    D      I7v            -      4        -6        -     7            -    7  -             -")
     wait(0.2)
-	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("𝄃                  XMBE           -      4        -6        -     7            -    7  -             -")
+	game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("𝄃          -        XMBE           -      4    +    -6        -     7            -    7  -             -")
     wait (0.9)
     game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("<>-chat cleared!-<> ")
 end)
@@ -268,7 +342,7 @@ end)
 
 
 tab5.newButton("bypassed chat", "stfu-100%noban", function()
-game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("shut the <F<+>U<->C<+<K> up")
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("shut the <F<+>U<+>C<+<K> up")
 end)
 
 tab5.newButton("bypassed chat", "SHIT-100%noban", function()
@@ -347,7 +421,7 @@ end)
 
 
 
-tab5.newDropdown("removed features?", "things that were removed!", {"esp menu", "fly", " ", "  ", "  ", "  ", "  ", "  "}, function(selectedOption)
+tab5.newDropdown("removed features?", "things that were removed!", {"esp menu", "", " ", "  ", "  ", "  ", "  ", "  "}, function(selectedOption)
     print(selectedOption)
 end)
 
@@ -607,9 +681,7 @@ RunService.Stepped:Connect(function(time, step)
 end)
 end)
 
-tab1.newButton("velocity speed", "toggle is Z", function()
 
-end)
 --------------------
 tab1.newButton("velocity speed", "toggle is Z", function()
    local speedhack = false
@@ -706,26 +778,7 @@ end)
 
 -------------------------------
 -------------------------------
-tab1.newButton("Spinbot", "makes your character spin in a werid way[upsidedown]", function()
-   game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync(".spinbot")
-   
-   
-    -- SIGMA YURI PAID YAYYAYYAYAY
- 
-power = 400 -- change this to make it more or less powerful
- 
-game:GetService('RunService').Stepped:connect(function()
-game.Players.LocalPlayer.Character.Head.CanCollide = false
-game.Players.LocalPlayer.Character.UpperTorso.CanCollide = false
-game.Players.LocalPlayer.Character.LowerTorso.CanCollide = false
-game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
-end)
-wait(.1)
-local bambam = Instance.new("BodyThrust")
-bambam.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
-bambam.Force = Vector3.new(power,0,power)
-bambam.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
-end)
+
 -------------------------------
 tab1.newButton("death postion spawn", "respawn you where you died", function()
 function log() deadpos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame end
@@ -3832,7 +3885,7 @@ end)
 --------------------------------------------------
 ----------------------------------------------
 -------------------------------end of aimbot tab now starting visuals!
-tab3.newButton("esp SKELETON", "skeleton esp[may cause lag]", function()
+tab3.newButton("esp SKELETON", "skeleton esp[takes 1.7 fps]", function()
  loadstring(game:HttpGet("https://raw.githubusercontent.com/Blissful4992/ESPs/refs/heads/main/SkeletonESP.lua"))()
 end)
 
