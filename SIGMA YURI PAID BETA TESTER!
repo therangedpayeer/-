@@ -4163,10 +4163,14 @@ tab4.newButton("body resize", "head [30][MAX SIZE]DAHOOD", function()
 _G.HeadSize = 30.1 _G.Disabled = true game:GetService('RunService').RenderStepped:connect(function() if _G.Disabled then for i,v in next, game:GetService('Players'):GetPlayers() do if v.Name ~= game:GetService('Players').LocalPlayer.Name then pcall(function() v.Character.Head.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize) v.Character.Head.Transparency = 5 v.Character.Head.BrickColor = BrickColor.new("Yellow") v.Character.Head.Material = "Neon" v.Character.Head.CanCollide = false v.Character.Head.Massless = true end) end end end end)
 end)
 
+tab4.newButton("HEAD", "1.2", function()
+_G.HeadSize = 1.2 _G.Disabled = true game:GetService('RunService').RenderStepped:connect(function() if _G.Disabled then for i,v in next, game:GetService('Players'):GetPlayers() do if v.Name ~= game:GetService('Players').LocalPlayer.Name then pcall(function() v.Character.Head.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize) v.Character.Head.Transparency = 5 v.Character.Head.BrickColor = BrickColor.new("Yellow") v.Character.Head.Material = "Neon" v.Character.Head.CanCollide = false v.Character.Head.Massless = true end) end end end end)
+end)
 
 
-
-
+tab4.newButton("HEAD", "2", function()
+_G.HeadSize = 2 _G.Disabled = true game:GetService('RunService').RenderStepped:connect(function() if _G.Disabled then for i,v in next, game:GetService('Players'):GetPlayers() do if v.Name ~= game:GetService('Players').LocalPlayer.Name then pcall(function() v.Character.Head.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize) v.Character.Head.Transparency = 5 v.Character.Head.BrickColor = BrickColor.new("Yellow") v.Character.Head.Material = "Neon" v.Character.Head.CanCollide = false v.Character.Head.Massless = true end) end end end end)
+end)
 
 
 
@@ -4208,7 +4212,7 @@ tab3.newButton("ESP", "red box", function()
 loadstring(game:HttpGet("https://pastebin.com/raw/uHV8a9Cd"))()
 end)
 
-tab3.newButton("ESP", "black box", function()
+tab3.newButton("ESP", "team=geen enemy= RED!", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Blissful4992/ESPs/refs/heads/main/2D%20Box%20ESP/ESP.lua"))()
 end)
 
