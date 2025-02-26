@@ -3960,11 +3960,11 @@ end)
 ----------------------------
 
 ---------======================---------------+++++++86235462354876325746532745273fhwgedvbjfbvweujhgfv
-tab2.newButton("hood customs ", "0.135[X]smooth?", function()
+tab2.newButton("hood customs ", "0.135[X]smooth?[BEST HD OPTION]", function()
 getgenv().NemesisPreBeta = {
 		["Settings"] = {
 			Disabling = {Toggle = false, Keybind = "H"},
-			UpdateTickDelay = 0.1
+			UpdateTickDelay = 0.5
 		},
 		["Camlock"] = {
 			Toggling = {
@@ -3980,8 +3980,8 @@ getgenv().NemesisPreBeta = {
 				},
 				Smoothing = {
 					smoothness = true, 
-					x = 0.2, 
-					y = 0.1
+					x = .2, 
+					y = .1
 				},
 				OffSets = {
 					Jump = {
@@ -4020,7 +4020,7 @@ getgenv().NemesisPreBeta = {
 		},
 		["Field Of View"] = {
 			Enable = true, 
-			Size = 79, 
+			Size = 159, 
 			Color = Color3.fromRGB(255, 255, 255), 
 		},
 		["Miscs"] = {
