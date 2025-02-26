@@ -126,13 +126,17 @@ local tab5 = DrRayLibrary.newTab("LOGS/CB", "ImageIdHere")
 
 
 
+tab3.newButton("timer", "tells you how many m/s you been playing!", function()
+
+end)
 
 
 
 
 
-
-
+tab5.newButton("FLY", "bypassed cframe fly [B]", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/CNxLTaDC"))()
+end)
 
 ---------------------------
 -------------
@@ -3938,13 +3942,13 @@ tab4.newButton("body resize", "head [30][MAX SIZE]DAHOOD", function()
 _G.HeadSize = 30.1 _G.Disabled = true game:GetService('RunService').RenderStepped:connect(function() if _G.Disabled then for i,v in next, game:GetService('Players'):GetPlayers() do if v.Name ~= game:GetService('Players').LocalPlayer.Name then pcall(function() v.Character.Head.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize) v.Character.Head.Transparency = 5 v.Character.Head.BrickColor = BrickColor.new("Yellow") v.Character.Head.Material = "Neon" v.Character.Head.CanCollide = false v.Character.Head.Massless = true end) end end end end)
 end)
 
-tab4.newButton("HEAD", "1.2", function()
-_G.HeadSize = 1.2 _G.Disabled = true game:GetService('RunService').RenderStepped:connect(function() if _G.Disabled then for i,v in next, game:GetService('Players'):GetPlayers() do if v.Name ~= game:GetService('Players').LocalPlayer.Name then pcall(function() v.Character.Head.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize) v.Character.Head.Transparency = 5 v.Character.Head.BrickColor = BrickColor.new("Yellow") v.Character.Head.Material = "Neon" v.Character.Head.CanCollide = false v.Character.Head.Massless = true end) end end end end)
+tab4.newButton("HEAD", "1.5", function()
+_G.HeadSize = 1.5 _G.Disabled = true game:GetService('RunService').RenderStepped:connect(function() if _G.Disabled then for i,v in next, game:GetService('Players'):GetPlayers() do if v.Name ~= game:GetService('Players').LocalPlayer.Name then pcall(function() v.Character.Head.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize) v.Character.Head.Transparency = 5 v.Character.Head.BrickColor = BrickColor.new("Yellow") v.Character.Head.Material = "Neon" v.Character.Head.CanCollide = false v.Character.Head.Massless = true end) end end end end)
 end)
 
 
-tab4.newButton("HEAD", "2", function()
-_G.HeadSize = 2 _G.Disabled = true game:GetService('RunService').RenderStepped:connect(function() if _G.Disabled then for i,v in next, game:GetService('Players'):GetPlayers() do if v.Name ~= game:GetService('Players').LocalPlayer.Name then pcall(function() v.Character.Head.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize) v.Character.Head.Transparency = 5 v.Character.Head.BrickColor = BrickColor.new("Yellow") v.Character.Head.Material = "Neon" v.Character.Head.CanCollide = false v.Character.Head.Massless = true end) end end end end)
+tab4.newButton("TORSO", "1.5", function()
+_G.TorsoSize = 1.5 _G.Disabled = true game:GetService('RunService').RenderStepped:connect(function() if _G.Disabled then for i,v in next, game:GetService('Players'):GetPlayers() do if v.Name ~= game:GetService('Players').LocalPlayer.Name then pcall(function() v.Character.Torso.Size = Vector3.new(_G.TorsoSize,_G.TorsoSize,_G.TorsoSize) v.Character.Torso.Transparency = 5 v.Character.Torso.BrickColor = BrickColor.new("Yellow") v.Character.Torso.Material = "Neon" v.Character.Torso.CanCollide = false v.Character.Torso.Massless = true end) end end end end)
 end)
 
 
@@ -3972,22 +3976,22 @@ _G.AutofarmSettings = {
 loadstring(game:HttpGet("https://pastebin.com/raw/Lr8HQU96"))()
 end)
 ----------------------
-tab3.newButton("ESP", "tracers+box+health bar", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Blissful4992/ESPs/refs/heads/main/2D%20Box%20ESP/ESP%20%2B%20Health%20Bars.lua"))()
+tab3.newButton("ESP", "PURPLE BOX v2", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/UDGMU4vm"))()
 end)
 
 
 
-tab3.newButton("ESP", "green box", function()
+tab3.newButton("ESP", "green box v1", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Blissful4992/ESPs/refs/heads/main/2D%20Box%20ESP/ESP.lua"))()
 end)
 
 
-tab3.newButton("ESP", "red box", function()
+tab3.newButton("ESP", "red box v1", function()
 loadstring(game:HttpGet("https://pastebin.com/raw/uHV8a9Cd"))()
 end)
 
-tab3.newButton("ESP", "team=geen enemy= RED!", function()
+tab3.newButton("ESP", "team=geen enemy= RED! v1", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Blissful4992/ESPs/refs/heads/main/2D%20Box%20ESP/ESP.lua"))()
 end)
 
@@ -3998,7 +4002,7 @@ tab3.newButton("ESP", "roblox health bar", function()
 
 local function ApplyESP(v)
    if v.Character and v.Character:FindFirstChildOfClass'Humanoid' then
-       v.Character.Humanoid.NameDisplayDistance = 115
+       v.Character.Humanoid.NameDisplayDistance = 15
        v.Character.Humanoid.NameOcclusion = "NoOcclusion"
        v.Character.Humanoid.HealthDisplayDistance = 157
        v.Character.Humanoid.HealthDisplayType = "AlwaysOn"
@@ -4020,4 +4024,33 @@ game.Players.PlayerAdded:Connect(function(v)
        ApplyESP(v)
 	   end)
 	   end)
+end)
+
+
+
+
+tab3.newButton("timer", "tells you how many m/s you been playing!", function()
+local player = game.Players.LocalPlayer
+local gui = player:WaitForChild("PlayerGui")
+local screenGui = Instance.new("ScreenGui")
+screenGui.Parent = gui
+
+local textLabel = Instance.new("TextLabel")
+textLabel.Parent = screenGui
+textLabel.Size = UDim2.new(0, 100, 0, 70)  -- Size of the label
+textLabel.Position = UDim2.new(0.5, -200, 0.5, 430)  -- Center the label5
+textLabel.BackgroundTransparency = 1  -- Make background transparent
+textLabel.TextColor3 = Color3.fromRGB(30, 30, 20)  -- White text
+textLabel.TextScaled = true  -- Scale text to fit
+textLabel.Text = "seconds"  -- Initial textsononds
+
+local startTime = tick()  -- Get the start time when the player joins
+
+-- Update the time every second
+while true do
+    local elapsedTime = math.floor(tick() - startTime)
+    textLabel.Text = "time: " .. elapsedTime .. " seconds"
+    wait(1)  -- Update every 1 second
+end
+
 end)
