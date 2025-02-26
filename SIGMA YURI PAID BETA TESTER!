@@ -3960,7 +3960,7 @@ end)
 ----------------------------
 
 ---------======================---------------+++++++86235462354876325746532745273fhwgedvbjfbvweujhgfv
-tab2.newButton("hood customs ", "0.004[X]", function()
+tab2.newButton("hood customs ", "0.135[X]smooth?", function()
 getgenv().NemesisPreBeta = {
 		["Settings"] = {
 			Disabling = {Toggle = false, Keybind = "H"},
@@ -3969,19 +3969,19 @@ getgenv().NemesisPreBeta = {
 		["Camlock"] = {
 			Toggling = {
 				Enable = true, 
-				Keybind = "C"
+				Keybind = "X"
 			},
 			Settings = {
 				Prediction = { 
 					true, 
-					.004, 
+					.135, 
 					false, 
 					.003
 				},
 				Smoothing = {
 					smoothness = true, 
-					x = 1, 
-					y = 1
+					x = 0.2, 
+					y = 0.1
 				},
 				OffSets = {
 					Jump = {
