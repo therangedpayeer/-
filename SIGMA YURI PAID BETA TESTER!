@@ -126,7 +126,7 @@ local tab5 = DrRayLibrary.newTab("LOGS/CB", "ImageIdHere")
 
 
 
-tab5.newButton("triggerbot", "dont work on most r15 games!", function()
+tab4.newButton("triggerbot", "dont work on most r15 games!", function()
  local player = game:GetService("Players").LocalPlayer
 local mouse = player:GetMouse()
 game:GetService("RunService").RenderStepped:Connect(function()
