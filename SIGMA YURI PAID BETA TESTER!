@@ -150,71 +150,7 @@ tab5.newButton("rejoin", "rejoins current game", function()
 game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
 end)
 --------------------------------------------------------------------------------
-tab3.newButton("VISUALS!", "if somebody takes damage they turn purple", function()
--- Script placed in ServerScriptService
-local function makeNeonPurple(player)
-    -- Ensure the player has a character
-    local character = player.Character
-    if character and character:FindFirstChild("Humanoid") then
-        -- Get the player's character's humanoid
-        local humanoid = character:FindFirstChild("Humanoid")
-        
-        -- Change the character's color to neon purple
-        for _, part in ipairs(character:GetChildren()) do
-            if part:IsA("BasePart") then
-                part.Color = Color3.fromRGB(255, 255, 255) -- Neon purple color
-                part.Material = Enum.Material.SmoothPlastic -- Smooth, shiny look
-            end
-        end
-        
-        -- Reset back to normal color after 2 seconds
-        wait(2)
-        
-        -- Restore the original color
-        for _, part in ipairs(character:GetChildren()) do
-            if part:IsA("BasePart") then
-                part.Color = part.Parent:FindFirstChild("OriginalColor") or Color3.fromRGB(255, 255, 255) -- Default color (white)
-            end
-        end
-    end
-end
 
--- Connect to the player taking damage
-game.Players.PlayerAdded:Connect(function(player)
-    player.CharacterAdded:Connect(function(character)
-        -- Track each part's original color
-        for _, part in ipairs(character:GetChildren()) do
-            if part:IsA("BasePart") then
-                local originalColor = Instance.new("ObjectValue")
-                originalColor.Name = "OriginalColor"
-                originalColor.Value = part.Color
-                originalColor.Parent = part
-            end
-        end
-
-        -- Listen for damage
-        local humanoid = character:WaitForChild("Humanoid")
-        humanoid.Died:Connect(function()
-            -- Restore color on death if needed
-            wait(1)  -- Delay to avoid any race conditions
-            for _, part in ipairs(character:GetChildren()) do
-                if part:IsA("BasePart") then
-                    part.Color = part.Parent:FindFirstChild("OriginalColor") or Color3.fromRGB(255, 255, 255)
-                end
-            end
-        end)
-
-        -- When the humanoid takes damage
-        humanoid.HealthChanged:Connect(function(health)
-            if health < humanoid.MaxHealth then
-                -- Player took damage, trigger color change
-                makeNeonPurple(player)
-            end
-        end)
-    end)
-end)
-
-end)
 
 
 
@@ -438,21 +374,21 @@ end)
 
 -------------
 
-tab5.newDropdown("view updates?", "features that were fixed/updated", {"100% AIMBOT WORKING NOW!", "CHANGED EVERY AIMBOT SOURCE FIXED", "added server related scripts!", "FIXED CHAT BYPASS", "added 2 different chat clear options", "", "", ""}, function(selectedOption)
+tab5.newDropdown("view updates?", "features that were fixed/updated", {"fixed aimbot prediction", "", "", "", "", "", "", ""}, function(selectedOption)
     print(selectedOption)
 end)
 
 
 
 
-tab5.newDropdown("added features?", "things that were added!", {"updates tab!", "cframe fly[BYPASSED]", "more presets/hitbox extenders", "CS body color/effect", "death respawn", "CHAT BYPASSER!!"}, function(selectedOption)
+tab5.newDropdown("added features?", "things that were added!", {"updates tab!", "triggerbot",  "", "", "", ""}, function(selectedOption)
     print(selectedOption)
 end)
 
 
 
 
-tab5.newDropdown("removed features?", "things that were removed!", {"esp menu", "", " ", "  ", "  ", "  ", "  ", "  "}, function(selectedOption)
+tab5.newDropdown("removed features?", "", {"", "", " ", "  ", "  ", "  ", "  ", "  "}, function(selectedOption)
     print(selectedOption)
 end)
 
