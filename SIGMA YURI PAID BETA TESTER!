@@ -1,29 +1,20 @@
-local player = game.Players.LocalPlayer
-local chatService = game:GetService("Chat")
+print("welcome back sigma yuri user i have made this ui less complex and more simple to use hope you enjoy!")
+print("updated")
+print("time mark")
+print("3/3/2025 8:39pm")
+print("total time/hours")
+print("4")
 
--- Message content
-local message = [[
-       CURRENTLY IN REWRITE
-	  CURRENTLY IN REWRITE
-	   ⓒⓤⓡⓡⓔⓝⓣⓞⓨ ⓘⓝ ⓡⓔⓦⓡⓘⓣⓔ  
-	    ⓒⓤⓡⓡⓔⓝⓣⓞⓨ ⓘⓝ ⓡⓔⓦⓡⓘⓣⓔ  
-       CURRENTLY IN REWRITE
-____________________________________________
-	   CODE HAS BEEN MESSED UP
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/lime"))()
 
-          currently discountinued:(
-           press f9 for more info
-]]  
-                                        
+local w = Library:Window("SG-loader")
 
--- Function to display the message in chat
-local function displayMessage()
-    chatService:Chat(player.Character.Head, message, Enum.ChatColor.Red)
-end
+w:Button("aimbot ui?", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/Ew2tdqcX"))()
+end)
 
--- Send the message when the game starts
-displayMessage()
 
-print("i made a couple changes and when i updated nothing was working")
-print("3/2/2025   TIME-10:57.PM")
-print("script will be up in 1-2 hours or a day")
+
+w:Button("rage cheats", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/mZXhmKCp"))()
+end)
